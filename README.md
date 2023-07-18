@@ -2,4 +2,4 @@
  About me in:
 
  nikhilrana[
-](https://nikhilrana.netlify.app/)https://nikhilrana.netlify.app/
+](https://nikhilrana.com.np/)https://nikhilrana.com.np/
