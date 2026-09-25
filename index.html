@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nikhil Rana — Responsible AI, ML & Data</title>
+<title>Nikhil Rana</title>
 <meta name="description" content="Hi, I'm Nikhil Rana, an MSc Artificial Intelligence graduate working across responsible AI, machine learning, data science and data engineering. I built an LLM system that answers questions about UK company accounts from their own iXBRL tags, lifting accuracy from 45.1% to 92.2%. Based in London and open to relocating across the UK.">
 <meta name="author" content="Nikhil Rana">
 <link rel="canonical" href="https://nikhilrana.com.np/">
@@ -312,6 +312,8 @@ body[data-lens="rai"] li[data-r~="rai"],body[data-lens="ml"] li[data-r~="ml"],bo
 .rbox-head{margin-bottom:24px}
 .soon{display:flex;align-items:center;gap:12px;padding:14px 18px;border:1px dashed var(--line-2);border-radius:14px;color:var(--ink-2);font-size:.9rem;background:rgba(5,7,11,.6)}
 .soon .pulse{background:var(--a2);animation:pulse2 2.2s infinite}
+.soon.live{border-style:solid;border-color:rgba(110,231,183,.35)}.soon.live .pulse{background:var(--good)}.soon.live .btn{margin-left:auto;flex-shrink:0}
+@media (max-width:640px){.soon.live{flex-wrap:wrap}.soon.live .btn{margin-left:0}}
 @keyframes pulse2{0%{box-shadow:0 0 0 0 rgba(167,139,250,.55)}70%{box-shadow:0 0 0 10px rgba(167,139,250,0)}100%{box-shadow:0 0 0 0 rgba(167,139,250,0)}}
 /* Ask the filing (bot) */
 .bot{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px}
@@ -799,7 +801,8 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
       <div>
         <p class="lead">I’m an MSc Artificial Intelligence graduate working across <strong>responsible AI, machine learning, data science and data engineering</strong>. I built an LLM system that answers questions about UK company accounts straight from their own machine-readable tags, which lifted accuracy from <strong>45.1% to 92.2%</strong>.</p>
         <div class="hero-actions">
-          <a class="btn btn-solid" href="#research">Try the demo <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-solid" href="https://ixbrl-grounded-qa.onrender.com/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="hero">Try the live app <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#research">See the research</a>
           <a class="btn btn-ghost" href="assets/Nikhil_Rana_CV.pdf" target="_blank" rel="noopener" data-umami-event="cv-download" data-umami-event-where="hero">Download CV <svg><use href="#i-dl"/></svg></a>
         </div>
       </div>
@@ -961,7 +964,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <p>UK accounts are filed in <strong>iXBRL (Inline XBRL)</strong>. The document looks like a normal web page to a person, but every figure is wrapped in a tag that says exactly what it is: its accounting concept, period, currency, scale and any breakdown. My system parses those tags into a database and answers questions <strong>only from the tagged facts</strong>, and if the fact isn’t there, it says so.</p>
         <p class="meta">Tested on 12 filings (Tesco, Lloyds, AstraZeneca, National Grid and more) · 102-question benchmark · Claude Sonnet 4.6 &amp; GPT-5.6 Terra · Supervised by Dr Ali Gheitasy</p>
       </div>
-      <div class="soon"><span class="pulse"></span><span><span class="hl">A public version of the app is in progress</span>, with sensible usage limits to keep it free. Until then, the assistant below replays real results. In the full app you upload any UK filing, browse its tagged facts and narrative sections, and question it with Claude or GPT.</span></div>
+      <div class="soon live"><span class="pulse"></span><span><span class="hl">The app is live.</span> Upload any UK Companies House iXBRL filing (up to 25&nbsp;MB) and ask questions in plain English. Every answer is traced to the tagged fact behind it. 10 free questions per session on GPT-5.6 Terra; Claude Sonnet 4.6 by access code. The assistant below replays results from my study.<span style="display:block;margin-top:6px;font-size:.78rem;color:var(--ink-3)">Free hosting, so the first load can take up to a minute to wake up.</span></span><a class="btn btn-sm btn-solid" href="https://ixbrl-grounded-qa.onrender.com/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="research">Open the app <svg><use href="#i-arrow"/></svg></a></div>
     </div>
 
     <div class="kpis">
@@ -1072,7 +1075,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
             <li>Reporting framework and company size are confounded in the corpus.</li>
             <li>The planned independent dual review couldn’t be completed.</li></ul></div>
           <div><h4>Where I’d take it next</h4><ul>
-            <li>Launch the public demo app (in progress, with usage limits).</li>
+            <li><s>Launch the public demo app</s> Done: <a class="u" href="https://ixbrl-grounded-qa.onrender.com/" target="_blank" rel="noopener">it’s live</a>.</li>
             <li>Scale towards 50 filings and 500 questions.</li>
             <li>Build a detector that checks against <em>all</em> legitimate tagged values.</li>
             <li>Test a finance-specialised model such as FinGPT or FinMA.</li></ul></div>
@@ -1097,14 +1100,14 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <p>An evaluation framework for Meta AI’s BART dialogue-summarisation model covering bias mitigation, privacy and output transparency. It asks whether a model should be deployed as well as whether it works.</p>
         <div class="tags"><span class="tag">NLP</span><span class="tag">BART</span><span class="tag">AI Ethics</span></div>
       </a>
-      <a class="proj glow reveal d1" data-r="ds ml da" href="https://github.com/NikhilRana2076" target="_blank" rel="noopener" data-cursor="Code" data-umami-event="project" data-umami-event-name="discount-impact">
+      <a class="proj glow reveal d1" data-r="ds ml da" href="https://github.com/NikhilRana2076/Impact_of_Discount_on_Customers" target="_blank" rel="noopener" data-cursor="Code" data-umami-event="project" data-umami-event-name="discount-impact">
         <div class="top"><span class="idx">02</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span></div>
         <div class="kind mono">Data science</div>
         <h3>Discount Impact &amp; Customer Segmentation</h3>
         <p>Do discounts really drive bigger spends? I segmented customers with K-Means, predicted high-value transactions with Logistic Regression and Decision Trees, and measured discount elasticity with Linear Regression (MAE, R²).</p>
         <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">Regression</span><span class="tag">Clustering</span></div>
       </a>
-      <a class="proj glow reveal d2" data-r="ml de" href="https://github.com/NikhilRana2076" target="_blank" rel="noopener" data-cursor="Code" data-umami-event="project" data-umami-event-name="face-voting">
+      <a class="proj glow reveal d2" data-r="ml de" href="https://github.com/NikhilRana2076/FRVSO" target="_blank" rel="noopener" data-cursor="Code" data-umami-event="project" data-umami-event-name="face-voting">
         <div class="top"><span class="idx">03</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span></div>
         <div class="kind mono">Computer vision · Security</div>
         <h3>Facial Recognition Voting System</h3>
@@ -1792,7 +1795,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   var cmdk=$('#cmdk'),cin=$('#cmdk-in'),clist=$('#cmdk-list'),csel=0,cshown=[],lastFocus=null;
   function go(id,tab){return function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:still()?'auto':'smooth'});if(tab)setTimeout(function(){$('#'+tab).click()},300)}}
   function copyEmail(){(navigator.clipboard?navigator.clipboard.writeText('nikhilrana2059@gmail.com'):Promise.reject()).then(function(){toast('Email copied ✓')},function(){toast('nikhilrana2059@gmail.com')});track('email-copy',{where:'palette'})}
-  var CMDS=[['Ask the iXBRL assistant','Demo',go('research','t-bot')],['Play “Fact or fabrication?”','Game',go('research','t-game')],['See the anatomy of an iXBRL tag','Learn',go('research','t-tag')],['Open the FPL captaincy lab','Fun',go('fpl')],
+  var CMDS=[['Open the live iXBRL app','App',function(){track('live-app',{where:'palette'});window.open('https://ixbrl-grounded-qa.onrender.com/','_blank')}],['Ask the iXBRL assistant','Demo',go('research','t-bot')],['Play “Fact or fabrication?”','Game',go('research','t-game')],['See the anatomy of an iXBRL tag','Learn',go('research','t-tag')],['Open the FPL captaincy lab','Fun',go('fpl')],
     ['Go to About','Section',go('about')],['Where I can relocate','Section',go('relocate')],['Go to Experience','Section',go('experience')],['Go to Research','Section',go('research')],['Go to Projects & hackathons','Section',go('projects')],
     ['Go to Tools & Domains','Section',go('toolkit')],['Explore my BSc modules','Section',go('education')],['Contact me','Section',go('contact')],
     ['Copy my email address','Action',copyEmail],['Download my CV','Action',function(){track('cv-download',{where:'palette'});window.open('assets/Nikhil_Rana_CV.pdf','_blank')}],
