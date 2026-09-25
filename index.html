@@ -422,8 +422,8 @@ body[data-lens="rai"] li[data-r~="rai"],body[data-lens="ml"] li[data-r~="ml"],bo
 .limits li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--ink-3)}
 
 /* ---------- Projects ---------- */
-.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.proj{padding:30px;display:flex;flex-direction:column;min-height:380px}
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.proj{padding:30px;display:flex;flex-direction:column;min-height:340px}
 .proj .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:46px}
 .proj .idx{font:italic 2.3rem/1 var(--serif);color:var(--ink-3)}
 .proj .arrow{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;transition:all .4s var(--ease)}
@@ -483,6 +483,11 @@ body[data-lens="rai"] li[data-r~="rai"],body[data-lens="ml"] li[data-r~="ml"],bo
 .edu .grade span{color:var(--ink-2);font-size:.9rem}
 .edu p{color:var(--ink-2);font-size:.93rem;margin:0 0 6px}
 .sems{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin:6px 0 16px}
+.sems.sems3{grid-template-columns:repeat(3,1fr)}
+.diss{padding:16px;border-radius:12px;border:1px solid rgba(125,211,252,.35);background:rgba(125,211,252,.05);animation:fadeUp .35s var(--ease) both}
+.diss h4{font-size:1rem;margin-bottom:8px;line-height:1.3}.diss p{font-size:.88rem;color:var(--ink-2);margin:0 0 10px}
+.diss .kv{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.diss .kv div{padding:10px;border-radius:10px;border:1px solid var(--line);background:rgba(5,7,11,.5);font-size:.72rem;color:var(--ink-3)}
+.diss .kv b{display:block;font-size:1.1rem;color:var(--ink);font-weight:600;letter-spacing:-.02em}
 .sems button{border:1px solid var(--line);background:transparent;color:var(--ink-3);padding:9px 0;border-radius:10px;font:500 .78rem/1 var(--mono);transition:all .25s}
 .sems button:hover{color:var(--ink);border-color:var(--line-2)}
 .sems button[aria-selected="true"]{background:rgba(125,211,252,.13);color:var(--ink);border-color:rgba(125,211,252,.5)}
@@ -576,6 +581,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .in .mini-chart .draw{stroke-dashoffset:0}
 .mini-chart .grow{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);transition:transform 1s var(--ease)}
 .in .mini-chart .grow{transform:scaleY(1)}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--good);margin-right:4px;vertical-align:1px;animation:pulse 2.2s infinite}
 .fplr-foot{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:18px;font-size:.86rem;color:var(--ink-2)}
 .fplr-foot b{color:var(--ink);font-weight:500}
 .coffee{grid-column:1/-1;padding:28px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
@@ -823,7 +829,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     <span class="tk"><span class="sym">NR:FILINGS</span><b>60/60</b><span class="up">parsed, 0 failures</span></span>
     <span class="tk"><span class="sym">NR:DETECTOR</span><b>0 / 3</b><span style="color:var(--bad)">▼ errors caught</span></span>
     <span class="tk"><span class="sym">NR:ISP-ACCOUNTS</span><b>900K+</b><span class="up">segmented</span></span>
-    <span class="tk"><span class="sym">NR:MSC-AVG</span><b>70%</b><span class="up">▲ Distinction</span></span>
+    <span class="tk"><span class="sym">NR:MSC</span><b>Distinction</b><span class="up">▲ expected</span></span>
     <span class="tk"><span class="sym">NR:VISA</span><b>No sponsorship</b><span class="up">until late 2028</span></span>
     <span class="tk"><span class="sym">NR:RELOCATE</span><b>UK-wide</b><span class="up">✓ Leeds · Newcastle · North</span></span>
     <span class="tk"><span class="sym">NR:ACCURACY</span><b>92.2%</b><span class="up">▲ 47.1pp</span></span>
@@ -831,11 +837,11 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     <span class="tk"><span class="sym">NR:FILINGS</span><b>60/60</b><span class="up">parsed, 0 failures</span></span>
     <span class="tk"><span class="sym">NR:DETECTOR</span><b>0 / 3</b><span style="color:var(--bad)">▼ errors caught</span></span>
     <span class="tk"><span class="sym">NR:ISP-ACCOUNTS</span><b>900K+</b><span class="up">segmented</span></span>
-    <span class="tk"><span class="sym">NR:MSC-AVG</span><b>70%</b><span class="up">▲ Distinction</span></span>
+    <span class="tk"><span class="sym">NR:MSC</span><b>Distinction</b><span class="up">▲ expected</span></span>
     <span class="tk"><span class="sym">NR:VISA</span><b>No sponsorship</b><span class="up">until late 2028</span></span>
     <span class="tk"><span class="sym">NR:RELOCATE</span><b>UK-wide</b><span class="up">✓ Leeds · Newcastle · North</span></span>
   </div>
-  <p class="sr-only">LLM accuracy 92.2%, up 47.1 points. 7,106 facts parsed. 60 of 60 filings parsed. Detector caught 0 of 3 errors. 900,000+ ISP accounts segmented. MSc average 70%. No sponsorship needed until late 2028. Willing to relocate UK-wide.</p>
+  <p class="sr-only">LLM accuracy 92.2%, up 47.1 points. 7,106 facts parsed. 60 of 60 filings parsed. Detector caught 0 of 3 errors. 900,000+ ISP accounts segmented. MSc on track for a Distinction. No sponsorship needed until late 2028. Willing to relocate UK-wide.</p>
 </div>
 
 <!-- ================= ABOUT ================= -->
@@ -846,7 +852,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     <div class="about-grid">
       <div class="about-text reveal">
         <p>I grew up in Nepal and studied <strong>Computer Science &amp; IT at Tribhuvan University</strong>, where databases, statistics and simulation became my favourite tools. The course took me from Database Management Systems through Data Warehousing &amp; Data Mining to Advanced Database and a Database Administration elective, and my first data role was at <strong>WorldLink Communications</strong>, Nepal’s largest internet provider.</p>
-        <p>In 2025 I moved to London for an <strong>MSc in Artificial Intelligence</strong> at the University of West London, where I’m averaging 70% (Distinction level). For my dissertation I engineered a full pipeline, from raw filings to parser, database, retrieval, LLM and evaluation, to find out whether AI can be trusted with company accounts.</p>
+        <p>In 2025 I moved to London for an <strong>MSc in Artificial Intelligence</strong> at the University of West London, where I’m on track for a Distinction, the master’s equivalent of a First. For my dissertation I engineered a full pipeline, from raw filings to parser, database, retrieval, LLM and evaluation, to find out whether AI can be trusted with company accounts.</p>
         <p>I’m open to roles in <strong>responsible AI, ML engineering, data science, data engineering, databases and analytics</strong>. What drives me is simple: technology should be honest with the people who rely on it. I like to understand a problem deeply before I solve it, I listen more than I talk, and I do my best work on things that matter to someone.</p>
       </div>
       <div class="bring reveal d1">
@@ -861,7 +867,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
       <div class="stat"><div class="n"><span class="grad" data-count="92.2" data-dec="1" data-suf="%">0%</span></div><div class="l">LLM accuracy on UK company filings, up from 45.1%</div></div>
       <div class="stat"><div class="n" data-count="7106" data-sep="1">0</div><div class="l">Tagged facts engineered into a structured database</div></div>
       <div class="stat"><div class="n" data-count="900" data-suf="k+">0</div><div class="l">Customer accounts at the ISP where I built segmentation models</div></div>
-      <div class="stat"><div class="n" data-count="70" data-suf="%">0%</div><div class="l">MSc average to date, at Distinction level</div></div>
+      <div class="stat"><div class="n grad">Distinction</div><div class="l">Expected MSc classification, with a 70%+ average</div></div>
     </div>
     <div class="principles-wrap reveal">
       <div class="sub-h" style="margin-bottom:18px"><h3>How I build AI <em class="grad">for people</em></h3><span class="mono" style="color:var(--ink-3)">5 principles · tap to expand</span></div>
@@ -1105,6 +1111,13 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <p>A secure academic voting system that verifies voters with LBPH and Haar Cascade facial recognition, then confirms them with one-time-password two-factor authentication.</p>
         <div class="tags"><span class="tag">OpenCV</span><span class="tag">Python</span><span class="tag">2FA</span></div>
       </a>
+      <a class="proj glow reveal d3" data-r="ml ds rai" href="https://github.com/NikhilRana2076/Diabetes_prediction/tree/feature/model-training" target="_blank" rel="noopener" data-cursor="Code" data-umami-event="project" data-umami-event-name="diabetes">
+        <div class="top"><span class="idx">04</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span></div>
+        <div class="kind mono">Machine learning · Healthcare · Team of 4</div>
+        <h3>Diabetes Prediction: fewer missed diagnoses</h3>
+        <p>An MSc Machine Learning group project on around 800 patient records. We replaced medically impossible zeros, engineered features and compared six models across four resampling strategies, picking winners by the <em>fewest missed diagnoses</em> rather than accuracy alone. A tuned voting ensemble with an optimised threshold reached <span class="hl">84.4% accuracy with 0 false negatives</span> on the 77-patient test set.</p>
+        <div class="tags"><span class="tag">XGBoost</span><span class="tag">LightGBM</span><span class="tag">SMOTE-ENN</span><span class="tag">Ensembles</span></div>
+      </a>
     </div>
 
     <div class="hack-list" id="hackathons" style="margin-top:70px">
@@ -1164,15 +1177,15 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
 <!-- ================= EDUCATION ================= -->
 <section class="section" id="education">
   <div class="wrap">
-    <div class="s-head"><div><div class="s-kicker mono reveal">06 — Education</div><h2 class="reveal">Where I <em class="grad">trained</em></h2></div><p class="reveal">Explore my undergraduate modules semester by semester. Anything highlighted maps directly to data and AI roles.</p></div>
+    <div class="s-head"><div><div class="s-kicker mono reveal">06 — Education</div><h2 class="reveal">Where I <em class="grad">trained</em></h2></div><p class="reveal">Explore both degrees semester by semester. Anything highlighted maps directly to data and AI roles.</p></div>
     <div class="edu-grid">
       <article class="edu glow reveal">
         <span class="when mono">Sep 2025 — Sep 2026</span>
         <h3>MSc Artificial Intelligence</h3>
         <div class="org">University of West London, UK</div>
-        <div class="grade"><b class="grad">70%</b><span>Current average · Distinction level</span></div>
-        <p>Big Data Analytics · Deep Learning · Machine Learning · Responsible AI</p>
-        <p style="color:var(--ink-3);font-size:.86rem">Dissertation: LLM hallucination in UK iXBRL reporting</p>
+        <div class="grade"><b class="grad">Distinction</b><span>Expected classification · 70%+ average</span></div>
+        <div class="sems sems3" role="tablist" aria-label="MSc semester" id="sems-msc"></div>
+        <div class="mods" id="mods-msc" aria-live="polite"></div>
       </article>
       <article class="edu glow reveal d1">
         <span class="when mono">2020 — 2024</span>
@@ -1197,22 +1210,22 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
 
     <div class="fplr glow reveal" id="fpl-season">
       <div class="fplr-head">
-        <div><span class="mono" style="color:var(--a1)">My FPL season in data · 2026/27</span><h3>Back in form this season.</h3><p>Snapshot after Gameweek 5. I’ve played every season since 2017/18.</p></div>
+        <div><span class="mono" style="color:var(--a1)">My FPL season in data · <span id="fpl-season-lbl">2026/27</span></span><h3>Back in form this season.</h3><p><span class="live-dot"></span> Live from the official FPL data · <span id="fpl-gw">Gameweek 5</span> · I’ve played every season since 2017/18.</p></div>
         <div class="fplr-kpis">
-          <div><b data-count="360">0</b><span>Total points</span></div>
-          <div><b data-count="387467" data-sep="1">0</b><span>Overall rank · <em class="grad" style="font-size:1.05em">top 4%</em></span></div>
-          <div><b>85</b><span>Best GW · GW1, rank 37,833 (top 0.4%)</span></div>
-          <div><b>£100.6m</b><span>Team value</span></div>
+          <div><b id="k-pts">360</b><span>Total points</span></div>
+          <div><b id="k-rank">387,467</b><span>Overall rank · <em class="grad" style="font-size:1.05em" id="k-pct">top 4%</em></span></div>
+          <div><b id="k-best">85</b><span id="k-best-l">Best GW · GW1, rank 37,833 (top 1%)</span></div>
+          <div><b id="k-val">£100.6m</b><span>Team value</span></div>
         </div>
       </div>
       <div class="fplr-charts">
-        <figure class="mini-chart"><figcaption><span class="mono">Points per gameweek</span></figcaption><svg id="fpl-pts" viewBox="0 0 320 170" role="img" aria-label="Points per gameweek: GW1 85, GW2 78, GW3 57, GW4 80, GW5 60"></svg></figure>
-        <figure class="mini-chart"><figcaption><span class="mono">Overall rank (higher is better)</span></figcaption><svg id="fpl-rank" viewBox="0 0 320 170" role="img" aria-label="Overall rank by gameweek: 37,833, 845,574, 638,377, 720,864, 387,467"></svg></figure>
+        <figure class="mini-chart"><figcaption><span class="mono">Points per gameweek</span></figcaption><svg id="fpl-pts" viewBox="0 0 320 170" role="img" aria-label="Points per gameweek"></svg></figure>
+        <figure class="mini-chart"><figcaption><span class="mono">Overall rank (higher is better)</span></figcaption><svg id="fpl-rank" viewBox="0 0 320 170" role="img" aria-label="Overall rank by gameweek"></svg></figure>
       </div>
       <div class="fplr-foot">
-        <span>🏆 Best finish: <b>266,096</b> (top 3%, 2021/22)</span>
+        <span>🏆 Best finish: <b id="k-bestfin">266,096</b> (<span id="k-bestfin-l">top 3%, 2021/22</span>)</span>
         <span>📈 <b>Five straight seasons</b> in the top 7% worldwide (2020/21–2024/25)</span>
-        <span>🧤 <b>59 points</b> left on my bench so far. As a goalkeeper, I know how the bench feels.</span>
+        <span>🧤 <b id="k-bench">59 points</b> left on my bench so far. As a goalkeeper, I know how the bench feels.</span>
       </div>
     </div>
 
@@ -1261,8 +1274,8 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <div><span class="mono">Writing</span><h3>On Medium</h3><p>I write to think clearly, and explaining things simply is a skill worth practising. <a class="u" href="https://medium.com/@nikhilrana2076" target="_blank" rel="noopener" data-umami-event="blog">Read on Medium ↗</a></p></div>
       </div>
       <div class="coffee glow reveal" id="coffee">
-        <span class="cup" aria-hidden="true">☕</span>
-        <div><span class="mono">Over a coffee, you’d learn that…</span><div class="fact" id="coffee-fact" aria-live="polite">I’d rather have one deep conversation than ten small ones.</div></div>
+        <span class="cup" aria-hidden="true">🍵</span>
+        <div><span class="mono">Over a cup of tea, you’d learn that…</span><div class="fact" id="coffee-fact" aria-live="polite">I’d rather have one deep conversation than ten small ones.</div></div>
         <button class="btn btn-sm" id="coffee-btn" type="button">Another one <svg><use href="#i-arrow"/></svg></button>
       </div>
       <div class="journey glow reveal">
@@ -1319,7 +1332,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr">2026</span> Nikhil Rana · Designed &amp; built in London · Cookie-free analytics</span>
+    <span>© <span id="yr">2026</span> Nikhil Rana · Designed &amp; built by me, with help from Claude · Cookie-free analytics</span>
     <span style="display:flex;gap:18px;align-items:center;flex-wrap:wrap"><button type="button" id="calm-btn">Calm mode: off</button><button type="button" id="cmdk-foot">Press <kbd>/</kbd> for the quick menu</button><a href="#top">Back to top ↑</a></span>
   </div>
 </footer>
@@ -1473,6 +1486,8 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     'Clustering':['Discount-impact project','WorldLink segmentation'],
     'OpenCV':['Facial recognition voting system (LBPH and Haar Cascade)'],
     '2FA':['One-time-password verification in the voting system'],
+    'XGBoost':['Diabetes prediction: tuned gradient boosting inside the final ensemble'],'LightGBM':['Diabetes prediction ensemble','Exoplanet ML hackathon: quantile regression'],
+    'SMOTE-ENN':['Diabetes prediction: compared ROS, RUS, SMOTE and SMOTE-ENN for class imbalance'],'Ensembles':['Diabetes prediction: weighted voting and stacking, plus threshold tuning to 0 missed diagnoses'],
     'Stock systems':['Sainsbury’s: barcode-driven replenishment'],'Compliance':['Sainsbury’s: food-safety and time-temperature controls'],
     'Customer service':['Sainsbury’s: in-store and online orders'],'Time management':['Balancing part-time work with a full-time MSc']};
   $$('.tag').forEach(function(t){var own=(t.getAttribute('data-r')||'').split(' '),par=t.parentNode.closest('[data-r]'),inh=par?par.getAttribute('data-r').split(' '):[];
@@ -1552,7 +1567,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   $$('.more').forEach(function(b){b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',o);$('#'+b.getAttribute('aria-controls')).classList.toggle('open',o);b.firstChild.textContent=o?'Show less ':'Show more '})});
 
   /* ---------- Tabs ---------- */
-  $$('[role="tablist"]').forEach(function(list){if(list.id==='sems')return;var tabs=$$('[role="tab"]',list);
+  $$('[role="tablist"]').forEach(function(list){if(list.id==='sems'||list.id==='sems-msc')return;var tabs=$$('[role="tab"]',list);
     function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;$('#'+x.getAttribute('aria-controls')).hidden=!on});
       if(t.id==='t-res')setTimeout(function(){$$('#p-res .seg').forEach(function(s,i){setTimeout(function(){s.style.width=s.dataset.w+'%'},still()?0:i*50)})},30);
       if(t.id==='t-tag')unlock('tag');tick();track('research-tab',{tab:t.id})}
@@ -1679,13 +1694,18 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     [['Design and Analysis of Algorithms','ml de'],['System Analysis and Design','de'],['Cryptography',''],['Simulation and Modeling','ds'],['Web Technology','']],
     [['Software Engineering','de'],['Compiler Design and Construction',''],['E-Governance','rai'],['NET Centric Computing',''],['Technical Writing','']],
     [['Advanced Java Programming',''],['Data Warehousing and Data Mining','dba de ds'],['Database Administration (elective)','dba de'],['Principles of Management','ops'],['Project Work','']],
-    [['Advanced Database','dba de'],['Internship (WorldLink · Data Analyst)','ds da']]];
+    [['Advanced Database','dba de'],['Introduction to Cloud Computing (elective)','de ml'],['International Business Management (elective)','ops'],['Internship (WorldLink · Data Analyst)','ds da']]];
   var LBL={ds:'Data sci',de:'Data eng',dba:'DB',ml:'ML/AI',rai:'Resp. AI',ops:'Ops',da:'Analytics'};
-  $('#sems').innerHTML=SEM.map(function(_,i){return '<button role="tab" aria-selected="'+(i===3)+'" data-s="'+i+'">S'+(i+1)+'</button>'}).join('');
-  function showSem(i){$$('#sems button').forEach(function(b){b.setAttribute('aria-selected',+b.dataset.s===i)});
-    $('#mods').innerHTML=SEM[i].map(function(m,j){var tags=m[1]?m[1].split(' '):[];return '<div class="mod'+(tags.length?' star':'')+'" style="animation-delay:'+(j*40)+'ms"><span>'+esc(m[0])+'</span><span class="rt">'+tags.map(function(t){return '<i>'+LBL[t]+'</i>'}).join('')+'</span></div>'}).join('')}
-  $('#sems').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;showSem(+b.dataset.s);tick();unlock('uni');track('semester',{s:+b.dataset.s+1})});
-  showSem(3);
+  var MSC=[[['Artificial Intelligence','ml rai'],['Machine Learning','ml ds'],['Responsible AI','rai']],
+           [['Deep Learning','ml'],['Big Data Analytics','de ds'],['Research Methods','ds rai']],'DISS'];
+  var DISS='<div class="diss"><span class="mono" style="color:var(--a1)">Dissertation · supervised by Dr Ali Gheitasy</span><h4>Detecting and Mitigating Hallucinations in LLMs for UK iXBRL Financial Reporting</h4><p>I built a pipeline that parses the machine-readable tags in UK company filings into a SQLite fact store, then answers questions only from those tagged facts. I benchmarked it on 102 questions across 12 real filings with Claude Sonnet 4.6 and GPT-5.6 Terra, and found that a popular hallucination detector missed every error.</p><div class="kv"><div><b>45→92%</b>accuracy</div><div><b>7,106</b>facts parsed</div><div><b>0 / 3</b>errors detected</div></div><p style="margin:10px 0 0"><a class="u" href="#research">Try the interactive demo ↑</a></p></div>';
+  function modHTML(list){return list.map(function(m,j){var tags=m[1]?m[1].split(' '):[];return '<div class="mod'+(tags.length?' star':'')+'" style="animation-delay:'+(j*40)+'ms"><span>'+esc(m[0])+'</span><span class="rt">'+tags.map(function(t){return '<i>'+LBL[t]+'</i>'}).join('')+'</span></div>'}).join('')}
+  function explorer(tabsId,modsId,data,start,label){var T=$('#'+tabsId),M=$('#'+modsId);
+    T.innerHTML=data.map(function(_,i){return '<button role="tab" aria-selected="'+(i===start)+'" data-s="'+i+'">'+(label?label(i):'S'+(i+1))+'</button>'}).join('');
+    function show(i){$$('button',T).forEach(function(b){b.setAttribute('aria-selected',+b.dataset.s===i)});M.innerHTML=data[i]==='DISS'?DISS:modHTML(data[i])}
+    T.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;show(+b.dataset.s);tick();unlock('uni');track('semester',{list:tabsId,s:+b.dataset.s+1})});show(start)}
+  explorer('sems','mods',SEM,3);
+  explorer('sems-msc','mods-msc',MSC,2,function(i){return ['S1','S2','S3 · Dissertation'][i]});
 
   /* ---------- FPL lab ---------- */
   var F=[['Form',8],['Fixture ease',6],['Expected pts',7],['Minutes',8],['Gut feeling',6]],brain='data',WTS={data:[.25,.2,.3,.17,.08],gut:[.12,.1,.1,.08,.6]};
@@ -1704,22 +1724,40 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   $$('.brain button').forEach(function(b){b.addEventListener('click',function(){brain=b.dataset.b;$$('.brain button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});updFPL();tick();unlock('fpl')})});
   updFPL();
 
-  /* ---------- FPL season charts (real data, snapshot after GW5 2026/27) ---------- */
-  (function(){var PTS=[85,78,57,80,60],RANK=[37833,845574,638377,720864,387467],W0=320,H0=170,L=34,Rr=10,T=18,B=24,cw=W0-L-Rr,ch=H0-T-B;
-    var s='',max=100;[0,25,50,75,100].forEach(function(v){var y=T+ch-v/max*ch;s+='<line class="gl" x1="'+L+'" x2="'+(W0-Rr)+'" y1="'+y+'" y2="'+y+'"/><text class="axl" x="'+(L-6)+'" y="'+(y+3)+'" text-anchor="end">'+v+'</text>'});
-    var bw=cw/PTS.length;PTS.forEach(function(v,i){var h=v/max*ch,x=L+i*bw+bw*.2,y=T+ch-h;s+='<rect class="bar grow'+(v===85?' best':'')+'" x="'+x+'" y="'+y+'" width="'+(bw*.6)+'" height="'+h+'" rx="4" style="transition-delay:'+(i*80)+'ms"><title>GW'+(i+1)+': '+v+' pts'+(i===0?' (Bench Boost)':'')+'</title></rect><text class="vl" x="'+(x+bw*.3)+'" y="'+(y-5)+'" text-anchor="middle">'+v+'</text><text class="axl" x="'+(x+bw*.3)+'" y="'+(H0-8)+'" text-anchor="middle">GW'+(i+1)+'</text>'});
+  /* ---------- FPL season: live data ----------
+     A GitHub Action (.github/workflows/update-fpl.yml) refreshes data/fpl-history.json every 6 hours.
+     The page reads the freshest copy from GitHub, then the local file, then this built-in fallback. */
+  var FPL_FALLBACK={"current":[{"event":1,"points":85,"total_points":85,"rank":37833,"overall_rank":37833,"overall_rank_percentage":"0.4","percentile_rank":1,"points_on_bench":0,"value":1000},{"event":2,"points":78,"total_points":163,"rank":5340667,"overall_rank":845574,"overall_rank_percentage":"8","percentile_rank":55,"points_on_bench":12,"value":1002},{"event":3,"points":57,"total_points":220,"rank":3062890,"overall_rank":638377,"overall_rank_percentage":"6","percentile_rank":30,"points_on_bench":10,"value":1005},{"event":4,"points":80,"total_points":300,"rank":2398867,"overall_rank":720864,"overall_rank_percentage":"7","percentile_rank":25,"points_on_bench":28,"value":1003},{"event":5,"points":60,"total_points":360,"rank":1577777,"overall_rank":387467,"overall_rank_percentage":"4","percentile_rank":15,"points_on_bench":9,"value":1006}],"past":[{"season_name":"2017/18","total_points":1590,"rank":4306082,"rank_percentage":"73"},{"season_name":"2018/19","total_points":2034,"rank":1490517,"rank_percentage":"24"},{"season_name":"2019/20","total_points":2005,"rank":1836200,"rank_percentage":"24"},{"season_name":"2020/21","total_points":2252,"rank":589177,"rank_percentage":"7"},{"season_name":"2021/22","total_points":2417,"rank":266096,"rank_percentage":"3"},{"season_name":"2022/23","total_points":2416,"rank":552556,"rank_percentage":"5"},{"season_name":"2023/24","total_points":2415,"rank":299117,"rank_percentage":"3"},{"season_name":"2024/25","total_points":2366,"rank":830381,"rank_percentage":"7"},{"season_name":"2025/26","total_points":1845,"rank":6879667,"rank_percentage":"53"}]};
+  function fmt(n){return Number(n).toLocaleString('en-GB')}
+  function renderFPL(d){var C=(d.current||[]).filter(function(g){return g.event});if(!C.length)return;
+    var PTS=C.map(function(g){return g.points}),RANK=C.map(function(g){return g.overall_rank}),GW=C.map(function(g){return g.event}),last=C[C.length-1];
+    var now=new Date(),y=now.getMonth()>=6?now.getFullYear():now.getFullYear()-1;$('#fpl-season-lbl').textContent=y+'/'+String(y+1).slice(2);
+    $('#fpl-gw').textContent='after Gameweek '+last.event;$('#k-pts').textContent=fmt(last.total_points);$('#k-rank').textContent=fmt(last.overall_rank);
+    $('#k-pct').textContent='top '+(last.overall_rank_percentage||'?')+'%';
+    var bi=PTS.indexOf(Math.max.apply(null,PTS)),bg=C[bi];$('#k-best').textContent=bg.points;$('#k-best-l').textContent='Best GW · GW'+bg.event+', rank '+fmt(bg.rank)+(bg.percentile_rank?' (top '+bg.percentile_rank+'%)':'');
+    $('#k-val').textContent='£'+(last.value/10).toFixed(1)+'m';
+    var bench=C.reduce(function(a,g){return a+(g.points_on_bench||0)},0);$('#k-bench').textContent=bench+' point'+(bench===1?'':'s');
+    var P=d.past||[];if(P.length){var best=P.reduce(function(a,b){return b.rank<a.rank?b:a});$('#k-bestfin').textContent=fmt(best.rank);$('#k-bestfin-l').textContent='top '+best.rank_percentage+'%, '+best.season_name}
+    var W0=320,H0=170,L=34,Rr=10,T=18,B=24,cw=W0-L-Rr,ch=H0-T-B,n=C.length,every=n>19?5:n>10?2:1;
+    var max=Math.max(100,Math.ceil(Math.max.apply(null,PTS)/25)*25),s='';
+    for(var v=0;v<=max;v+=max/4){var yy=T+ch-v/max*ch;s+='<line class="gl" x1="'+L+'" x2="'+(W0-Rr)+'" y1="'+yy+'" y2="'+yy+'"/><text class="axl" x="'+(L-6)+'" y="'+(yy+3)+'" text-anchor="end">'+v+'</text>'}
+    var bw=cw/n;PTS.forEach(function(v,i){var h=v/max*ch,x=L+i*bw+bw*.18,yy=T+ch-h,best=i===bi,lab=(n<=12||best)?'<text class="vl" x="'+(x+bw*.32)+'" y="'+(yy-5)+'" text-anchor="middle">'+v+'</text>':'';
+      s+='<rect class="bar grow'+(best?' best':'')+'" x="'+x+'" y="'+yy+'" width="'+(bw*.64)+'" height="'+h+'" rx="'+(n>20?2:4)+'" style="transition-delay:'+(i*40)+'ms"><title>GW'+GW[i]+': '+v+' pts</title></rect>'+lab+((i%every===0||i===n-1)?'<text class="axl" x="'+(x+bw*.32)+'" y="'+(H0-8)+'" text-anchor="middle">'+(n>12?GW[i]:'GW'+GW[i])+'</text>':'')});
     $('#fpl-pts').innerHTML=s;
-    // rank: log scale, inverted so "up" is better
-    var lo=Math.log10(20000),hi=Math.log10(1000000),ry=function(r){return T+(Math.log10(r)-lo)/(hi-lo)*ch},rx=function(i){return L+i*(cw/(RANK.length-1))};s='';
-    [[20000,'20k'],[100000,'100k'],[1000000,'1M']].forEach(function(t){var y=ry(t[0]);s+='<line class="gl" x1="'+L+'" x2="'+(W0-Rr)+'" y1="'+y+'" y2="'+y+'"/><text class="axl" x="'+(L-6)+'" y="'+(y+3)+'" text-anchor="end">'+t[1]+'</text>'});
+    var mn=Math.min.apply(null,RANK),mx=Math.max.apply(null,RANK),lo=Math.log10(mn)-.15,hi=Math.log10(mx)+.15,ry=function(r){return T+(Math.log10(r)-lo)/(hi-lo)*ch},rx=function(i){return n===1?L+cw/2:L+i*(cw/(n-1))};s='';
+    [[1e3,'1k'],[1e4,'10k'],[1e5,'100k'],[1e6,'1M'],[1e7,'10M']].forEach(function(t){var l=Math.log10(t[0]);if(l<lo||l>hi)return;var yy=ry(t[0]);s+='<line class="gl" x1="'+L+'" x2="'+(W0-Rr)+'" y1="'+yy+'" y2="'+yy+'"/><text class="axl" x="'+(L-6)+'" y="'+(yy+3)+'" text-anchor="end">'+t[1]+'</text>'});
     s+='<polyline class="ln draw" points="'+RANK.map(function(r,i){return rx(i)+','+ry(r)}).join(' ')+'"/>';
-    RANK.map(function(r,i){s+='<circle class="dt" cx="'+rx(i)+'" cy="'+ry(r)+'" r="4"><title>GW'+(i+1)+': '+r.toLocaleString('en-GB')+'</title></circle><text class="axl" x="'+rx(i)+'" y="'+(H0-8)+'" text-anchor="middle">GW'+(i+1)+'</text>'});
-    var last=RANK.length-1;s+='<text class="vl" x="'+(rx(last)-4)+'" y="'+(ry(RANK[last])-10)+'" text-anchor="end">387,467</text><text class="vl" x="'+(rx(0)+4)+'" y="'+(ry(RANK[0])-10)+'">37,833</text>';
-    $('#fpl-rank').innerHTML=s})();
+    RANK.forEach(function(r,i){s+='<circle class="dt" cx="'+rx(i)+'" cy="'+ry(r)+'" r="'+(n>20?2.5:4)+'"><title>GW'+GW[i]+': '+fmt(r)+'</title></circle>'+((i%every===0||i===n-1)?'<text class="axl" x="'+rx(i)+'" y="'+(H0-8)+'" text-anchor="middle">'+(n>12?GW[i]:'GW'+GW[i])+'</text>':'')});
+    var li=n-1,bestR=RANK.indexOf(mn);s+='<text class="vl" x="'+(rx(li)-4)+'" y="'+(ry(RANK[li])-10)+'" text-anchor="end">'+fmt(RANK[li])+'</text>';if(bestR!==li)s+='<text class="vl" x="'+(rx(bestR)+(bestR<n/2?4:-4))+'" y="'+(ry(mn)-10)+'" text-anchor="'+(bestR<n/2?'start':'end')+'">'+fmt(mn)+'</text>';
+    $('#fpl-rank').innerHTML=s}
+  renderFPL(FPL_FALLBACK);
+  (function(){var srcs=['https://raw.githubusercontent.com/NikhilRana2076/nikhilrana/main/data/fpl-history.json','data/fpl-history.json'];
+    (function tryNext(i){if(i>=srcs.length||location.protocol==='file:')return;fetch(srcs[i]+'?t='+Math.floor(Date.now()/3e5),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){if(d&&d.current&&d.current.length)renderFPL(d);else throw 0}).catch(function(){tryNext(i+1)})})(0)})();
 
   /* ---------- Over a coffee ---------- */
-  var COFFEE=['I’d rather have one deep conversation than ten small ones.','I notice the outlier in a dataset, and the quiet person in the meeting.','I care more about why a model works than whether it looks impressive.','I plan the route carefully, then take the scenic one anyway.','I do my best work when I know who it’s helping.','Long walks, mountains and live music are how I recharge.','I’ll probably remember what you told me about your weekend.','In 5-a-side I’m the keeper: calm under pressure, mostly.'],ci=0;
-  $('#coffee-btn').addEventListener('click',function(){var f=$('#coffee-fact');f.classList.add('fade');setTimeout(function(){ci=(ci+1)%COFFEE.length;f.textContent=COFFEE[ci];f.classList.remove('fade')},still()?0:220);tick();track('coffee')});
+  var COFFEE=['I’d rather have one deep conversation than ten small ones.','I notice the outlier in a dataset, and the quiet person in the meeting.','I care more about why a model works than whether it looks impressive.','I plan the route carefully, then take the scenic one anyway.','I do my best work when I know who it’s helping.','Long walks, mountains and live music are how I recharge.','I’ll probably remember what you told me about your weekend.','In 5-a-side I’m the keeper: calm under pressure, mostly.',
+    'Tea first, then debugging. The order matters.','I trust confidence intervals more than confident people.','My FPL transfers have a longer decision log than some models I’ve trained.','I name my variables properly. Future me says thank you.','My favourite metric is the one nobody thought to check.','As a keeper, I’ve learned the save nobody notices is still a save.','I’ve never met a messy spreadsheet I didn’t want to tidy.','I read the footnotes, and sometimes the terms and conditions too.','A good “not found” is more honest than a confident guess, in AI and in life.','I’ll happily explain a p-value over tea. You’ve been warned.'],ci=0;
+  $('#coffee-btn').addEventListener('click',function(){var f=$('#coffee-fact');f.classList.add('fade');setTimeout(function(){ci=(ci+1)%COFFEE.length;f.textContent=COFFEE[ci];f.classList.remove('fade')},still()?0:220);tick();track('tea')});
 
   /* ---------- Counters & reveal ---------- */
   function count(el){var to=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),suf=el.dataset.suf||'',sep=el.dataset.sep,st=null;

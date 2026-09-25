@@ -33,5 +33,8 @@ Custom events are already tagged: `cv-download`, `email-copy`, `email-click`, `l
 `lens`, `city`, `research-tab`, `bot-ask`, `game-finish`, `quiz-share`, `fpl`, `semester`, `badge`, `sound`, `wave`, `palette-open`, `sunrise` and `contact-form`.
 Umami is cookie-free, so no cookie banner is needed.
 
-## Updating the FPL season snapshot
-The FPL site blocks other websites from loading its data directly, so the "My FPL season in data" panel is a snapshot. To update it, edit the `PTS` and `RANK` arrays (search for `FPL season charts`), the KPI tiles and the "Snapshot after Gameweek N" line in `index.html`. You can also ask Claude to do it from your `/api/entry/2290455/history/` JSON.
+## FPL data updates itself
+`.github/workflows/update-fpl.yml` runs every 6 hours. It downloads your FPL history (team 2290455) into `data/fpl-history.json` and commits it only if something changed. The page reads that file straight from GitHub, so new gameweeks appear automatically.
+- **First run:** open the repo on GitHub, go to **Actions**, click **Update FPL data**, then **Run workflow**.
+- **If a run fails with a permissions error:** go to Settings → Actions → General → Workflow permissions and choose **Read and write permissions**.
+- **If GitHub pauses the schedule after a long inactive period:** open the Actions tab and click **Enable workflow**.
