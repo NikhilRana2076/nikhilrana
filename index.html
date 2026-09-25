@@ -1,265 +1,562 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en">
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikhil Rana</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikhil Rana — AI &amp; Data Graduate | MSc Artificial Intelligence</title>
+<meta name="description" content="Nikhil Rana — MSc Artificial Intelligence graduate (University of West London, 2026) seeking graduate and associate roles in data analytics, financial machine learning and responsible AI. Based in London; no sponsorship required until 2028.">
+<meta name="author" content="Nikhil Rana">
+<link rel="canonical" href="https://nikhilrana.com.np/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Nikhil Rana — AI &amp; Data Graduate">
+<meta property="og:description" content="MSc Artificial Intelligence graduate. RAG, LLM evaluation and financial data. Open to graduate roles in London.">
+<meta property="og:url" content="https://nikhilrana.com.np/">
+<meta name="theme-color" content="#0f2a44">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f2a44'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23fff' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nikhil Rana",
+  "url": "https://nikhilrana.com.np/",
+  "email": "mailto:nikhilrana2059@gmail.com",
+  "jobTitle": "AI & Data Graduate",
+  "address": {"@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB"},
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "University of West London"},
+    {"@type": "CollegeOrUniversity", "name": "Tribhuvan University"}
+  ],
+  "knowsAbout": ["Retrieval-Augmented Generation", "LLM Evaluation", "Machine Learning", "Data Analytics", "iXBRL Financial Reporting", "Responsible AI"],
+  "sameAs": ["https://github.com/NikhilRana2076", "https://www.linkedin.com/in/nikhil-rana2076/"]
+}
+</script>
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --surface-2:#f3f1ec;
+  --ink:#16202b; --ink-2:#44505c; --ink-3:#6b7682;
+  --line:#e3e0d8; --accent:#0f2a44; --accent-2:#1d4f7a; --accent-soft:#e8eef4;
+  --good:#1f6b4a;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --max:1080px; --radius:10px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0e141b; --surface:#141c25; --surface-2:#1a2430;
+    --ink:#e8ecf0; --ink-2:#b4bec8; --ink-3:#8793a0;
+    --line:#26323f; --accent:#9cc3e6; --accent-2:#b9d5ee; --accent-soft:#1a2a3a;
+    --good:#7ccaa4;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--ink);letter-spacing:-.01em;margin:0}
+p{margin:0 0 1em}
+ul{margin:0;padding-left:1.1em}
+li{margin:.35em 0}
+li::marker{color:var(--ink-3)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:4px}
 
+/* Nav */
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:1.1rem;color:var(--ink)}
+.brand:hover{text-decoration:none}
+.mono{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--accent);color:var(--bg);font:600 .85rem/1 var(--serif);letter-spacing:.02em}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.nav li{margin:0}
+.nav ul a{display:block;padding:8px 12px;border-radius:6px;color:var(--ink-2);font-size:.92rem;font-weight:500}
+.nav ul a:hover,.nav ul a.active{color:var(--ink);background:var(--surface-2);text-decoration:none}
+.nav .cv-link{margin-left:8px}
+.nav ul a.btn,.nav ul a.btn:hover{color:var(--bg);background:var(--accent)}
+.nav ul a.btn:hover{background:var(--accent-2)}
+.metrics-wrap{padding-bottom:72px}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;width:40px;height:40px;color:var(--ink);cursor:pointer}
+.menu-toggle svg{width:20px;height:20px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;font-weight:500;font-size:.95rem;border:1px solid var(--accent);transition:background .15s,color .15s,border-color .15s}
+.btn:hover{text-decoration:none}
+.btn-primary{background:var(--accent);color:var(--bg)}
+.btn-primary:hover{background:var(--accent-2);border-color:var(--accent-2)}
+.btn-ghost{background:transparent;color:var(--accent)}
+.btn-ghost:hover{background:var(--accent-soft)}
+.btn svg{width:16px;height:16px}
+.btn-sm{padding:7px 12px;font-size:.88rem}
+
+/* Hero */
+.hero{padding:88px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px}
+.hero h1{font-size:clamp(2.4rem,5.5vw,3.6rem);line-height:1.08;margin-bottom:12px}
+.hero .role{font-family:var(--serif);font-size:clamp(1.15rem,2.2vw,1.4rem);color:var(--ink-2);margin-bottom:20px;font-weight:500}
+.hero .lead{font-size:1.06rem;color:var(--ink-2);max-width:620px;margin-bottom:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 20px;list-style:none;padding:0;margin:0;color:var(--ink-2);font-size:.9rem}
+.facts li{display:flex;align-items:center;gap:8px;margin:0}
+.facts svg{width:16px;height:16px;color:var(--ink-3);flex:none}
+.facts .ok svg{color:var(--good)}
+.portrait{width:220px;height:220px;border-radius:50%;background:linear-gradient(145deg,var(--accent) 0%,var(--accent-2) 100%);display:grid;place-items:center;color:var(--bg);font:600 4.2rem/1 var(--serif);letter-spacing:.02em;box-shadow:0 0 0 8px var(--surface),0 0 0 9px var(--line);overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:cover}
+
+/* Metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.metric{padding:22px 24px;border-right:1px solid var(--line)}
+.metric:last-child{border-right:0}
+.metric .n{font-family:var(--serif);font-size:1.9rem;font-weight:600;color:var(--accent);line-height:1.1;font-variant-numeric:tabular-nums}
+.metric .l{font-size:.86rem;color:var(--ink-3);margin-top:6px;line-height:1.45}
+
+/* Sections */
+section.block{padding:80px 0;border-top:1px solid var(--line)}
+section.block:first-of-type{border-top:0}
+.sec-head{display:grid;grid-template-columns:220px 1fr;gap:40px}
+.sec-head h2{font-size:1.65rem;line-height:1.2}
+.sec-head .kicker{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+.sec-body{min-width:0}
+.prose p{color:var(--ink-2);font-size:1.02rem}
+
+/* Entries */
+.entry{padding:0 0 32px;margin-bottom:32px;border-bottom:1px solid var(--line)}
+.entry:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.entry-top{display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap}
+.entry h3{font-size:1.2rem}
+.entry .org{color:var(--ink-2);font-weight:500;margin:2px 0 12px}
+.entry .when{font-size:.88rem;color:var(--ink-3);white-space:nowrap;font-variant-numeric:tabular-nums}
+.entry ul{color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding:0;list-style:none}
+.tags li{margin:0;font-size:.8rem;padding:3px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line)}
+
+/* Featured research */
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;position:relative}
+.feature .badge{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:999px;margin-bottom:14px}
+.feature h3{font-size:1.4rem;line-height:1.3;margin-bottom:10px}
+.feature .sub{color:var(--ink-3);font-size:.92rem;margin-bottom:22px}
+.result{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;padding:20px 0;margin:4px 0 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.result .fig{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
+.result .fig span{color:var(--ink-3);font-size:1.3rem;font-weight:500;margin:0 6px}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:130px 1fr 52px;gap:10px;align-items:center;font-size:.85rem;color:var(--ink-2)}
+.bar .track{height:10px;background:var(--surface-2);border-radius:999px;overflow:hidden}
+.bar .fill{height:100%;border-radius:999px;background:var(--ink-3);width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.bar.best .fill{background:var(--accent)}
+.bar .v{text-align:right;font-variant-numeric:tabular-nums;font-weight:500;color:var(--ink)}
+.result-note{font-size:.82rem;color:var(--ink-3);margin-top:4px}
+
+/* Cards grid */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column}
+.card h3{font-size:1.08rem;line-height:1.35;margin-bottom:8px}
+.card .meta{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+.card p{color:var(--ink-2);font-size:.95rem;margin-bottom:0}
+.card .tags{margin-top:auto;padding-top:16px}
+.card .award{color:var(--good)}
+
+/* Skills */
+.skills{display:grid;gap:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+.skill-row{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:20px 24px;border-bottom:1px solid var(--line)}
+.skill-row:last-child{border-bottom:0}
+.skill-row h3{font-family:var(--sans);font-size:.9rem;font-weight:600;color:var(--ink);padding-top:4px}
+.skill-row .tags{margin-top:0}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.contact-list{list-style:none;padding:0;margin:20px 0 0}
+.contact-list li{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);margin:0}
+.contact-list li:last-child{border-bottom:0}
+.contact-list svg{width:20px;height:20px;color:var(--accent);flex:none}
+.contact-list .k{font-size:.78rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.contact-list .v{color:var(--ink);font-weight:500;word-break:break-word}
+form{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:grid;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-size:.85rem;font-weight:500;color:var(--ink-2)}
+input,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px;width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--accent-2);box-shadow:0 0 0 3px var(--accent-soft)}
+textarea{min-height:140px;resize:vertical}
+form button{justify-self:start;cursor:pointer}
+.form-status{font-size:.9rem;min-height:1.2em;margin:0}
+.form-status.ok{color:var(--good)}
+.form-status.err{color:#b3261e}
+
+footer.site{border-top:1px solid var(--line);padding:32px 0;color:var(--ink-3);font-size:.88rem}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.social{display:flex;gap:6px}
+.social a{display:grid;place-items:center;width:38px;height:38px;border-radius:8px;color:var(--ink-2);border:1px solid var(--line)}
+.social a:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.social svg{width:18px;height:18px}
+
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.bar .fill{transition:none}}
+
+/* Responsive */
+@media (max-width:900px){
+  .sec-head{grid-template-columns:1fr;gap:20px}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .metric:nth-child(2){border-right:0}
+  .metric:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .menu-toggle{display:grid;place-items:center}
+  .nav ul{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 16px 16px;display:none}
+  .nav ul.open{display:flex}
+  .nav ul a{padding:12px}
+  .nav .cv-link{margin:8px 0 0}
+  .hero{padding:48px 0 40px}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .portrait{width:120px;height:120px;font-size:2.4rem;order:-1}
+  .cards{grid-template-columns:1fr}
+  .skill-row{grid-template-columns:1fr;gap:10px}
+  .result{grid-template-columns:1fr}
+  .bar{grid-template-columns:100px 1fr 48px}
+  .feature{padding:22px}
+  section.block{padding:56px 0}
+  .row2{grid-template-columns:1fr}
+  .wrap{padding:0 16px}
+}
+@media (max-width:340px){.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}}
+@media print{header.nav,.hero-actions,form,.menu-toggle,footer.site .social{display:none}.reveal{opacity:1;transform:none}section.block{padding:24px 0;break-inside:avoid}}
+</style>
 </head>
-
 <body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div>
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#">Nikhil <span>Rana.</span></a></div>
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#services" class="menu-btn">Services</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#reference" class="menu-btn">Reference</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"/><path d="m7 11 5 5 5-5"/><path d="M5 20h14"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></symbol>
+</svg>
+
+<header class="nav" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Nikhil Rana — home"><span class="mono" aria-hidden="true">NR</span>Nikhil Rana</a>
+    <nav aria-label="Primary">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="cv-link"><a class="btn btn-primary btn-sm" href="assets/Nikhil_Rana_CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
     </nav>
+  </div>
+</header>
 
-    <!-- home section start -->
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Nikhil Rana</div>
-                <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#contact">Contact me</a>
-            </div>
+<main id="main">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">AI &amp; Data · Graduate Candidate</div>
+          <h1>Nikhil Rana</h1>
+          <p class="role">MSc Artificial Intelligence · University of West London</p>
+          <p class="lead">I build and rigorously evaluate machine-learning systems on real-world data, with a focus on financial reporting, large language models and responsible AI. I am seeking graduate and associate roles in data analytics, financial machine learning and AI across fintech and financial services.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="assets/Nikhil_Rana_CV.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Download CV</a>
+            <a class="btn btn-ghost" href="#contact"><svg><use href="#i-mail"/></svg>Get in touch</a>
+          </div>
+          <ul class="facts">
+            <li><svg><use href="#i-pin"/></svg>London, United Kingdom</li>
+            <li><svg><use href="#i-cap"/></svg>Graduating September 2026</li>
+            <li class="ok"><svg><use href="#i-check"/></svg>No visa sponsorship required until 2028</li>
+          </ul>
         </div>
-    </section>
+        <!-- To use a headshot instead of initials: add images/headshot.jpg and replace "NR" with <img src="images/headshot.jpg" alt="Nikhil Rana"> -->
+        <div class="portrait" aria-hidden="true">NR</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- about section start -->
-    <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">About me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="images/profile-1.jpeg" alt="">
-                </div>
-                <div class="column right">
-                    <div class="text">I'm Nikhil and I'm a <span class="typing-2"></span></div>
-                    <p>Hello, I am an analytical, bright, confident, dependable & enthusiastic fresher.<br><br>
-                        Currently, a BSc.CSIT student who loves to learn and expand his skills. 
+  <div class="wrap reveal metrics-wrap">
+    <div class="metrics" role="list">
+      <div class="metric" role="listitem"><div class="n">92.2%</div><div class="l">LLM answer accuracy on UK financial filings, up from 44.1%</div></div>
+      <div class="metric" role="listitem"><div class="n">7,106</div><div class="l">Structured facts extracted from 12 iXBRL statutory filings</div></div>
+      <div class="metric" role="listitem"><div class="n">900k+</div><div class="l">Customer base analysed at Nepal’s largest ISP</div></div>
+      <div class="metric" role="listitem"><div class="n">70%</div><div class="l">MSc average to date, Distinction level</div></div>
+    </div>
+  </div>
 
-                         <br>
-                         I am an aspiring data scientist with a diverse range of interests that include playing sports like football, traveling, 
-                         and indulging in entertainment such as watching anime, kdramas and movies.<br> 
-                         Combining my passion for data analysis and my enthusiasm for these hobbies, 
-                         I strive to leverage data-driven insights to uncover patterns and make informed decisions. <br>
+  <!-- About -->
+  <section class="block" id="about">
+    <div class="wrap sec-head reveal">
+      <div><div class="kicker">01</div><h2>About</h2></div>
+      <div class="sec-body prose">
+        <p>I am an MSc Artificial Intelligence graduate from the University of West London with a quantitative background in statistics, probability and simulation from my BSc in Computer Science &amp; Information Technology.</p>
+        <p>My dissertation examined why large language models hallucinate on structured financial data. I built a complete retrieval-augmented generation (RAG) pipeline over UK Companies House iXBRL filings and showed that tag-aware retrieval improves answer accuracy from 44.1% to 92.2% (p&nbsp;&lt;&nbsp;0.001). I also took part in the Financial Reporting Council (FRC) Hackathon, which gave me direct experience with regulatory financial data.</p>
+        <p>Before my master’s, I worked as a Data Analyst Intern at WorldLink Communications, building customer-segmentation and churn-risk models that informed the marketing team’s retention strategy. I value careful measurement, reproducible work and clear communication of results to non-technical stakeholders.</p>
+      </div>
+    </div>
+  </section>
 
-                    </p>
-                
-                    <a href="https://drive.google.com/file/d/19TmtR9gGrATlG5DdAwjFOJR3Vm2h9zlv/view" target="_blank">View CV</a>
+  <!-- Research -->
+  <section class="block" id="research">
+    <div class="wrap sec-head reveal">
+      <div><div class="kicker">02</div><h2>Featured Research</h2></div>
+      <div class="sec-body">
+        <article class="feature">
+          <span class="badge">MSc Dissertation · 2026</span>
+          <h3>Detecting and Mitigating Hallucinations in LLMs for UK iXBRL Financial Reporting</h3>
+          <p class="sub">University of West London · Evaluated across three experimental conditions and two LLMs</p>
 
-                </div>
+          <div class="result">
+            <div class="fig">44.1%<span>→</span>92.2%</div>
+            <div>
+              <div class="bars" aria-label="Answer accuracy by condition">
+                <div class="bar"><span>Baseline</span><div class="track"><div class="fill" data-w="44.1"></div></div><span class="v">44.1%</span></div>
+                <div class="bar best"><span>Tag-aware RAG</span><div class="track"><div class="fill" data-w="92.2"></div></div><span class="v">92.2%</span></div>
+              </div>
+              <p class="result-note">+48.0 percentage points · 95% CI [38.2, 57.8] · p &lt; 0.001</p>
             </div>
+          </div>
+
+          <ul>
+            <li>Built a direct iXBRL parser and structured fact store: 5,605 numeric and 1,501 narrative facts across 12 UK statutory filings.</li>
+            <li>Designed a 102-question gold-answer benchmark to measure factual accuracy objectively.</li>
+            <li>Diagnosed why SelfCheckGPT-style consistency checks failed to detect any baseline errors on structured financial data, an important limitation for real-world deployment.</li>
+            <li>Delivered an end-to-end demo: users upload any UK company filing, inspect its extracted XBRL tags and query it through Claude Sonnet or GPT for a side-by-side comparison of hallucination behaviour.</li>
+          </ul>
+          <ul class="tags"><li>Python</li><li>RAG</li><li>LLM Evaluation</li><li>iXBRL / XBRL</li><li>Hypothesis Testing</li><li>SelfCheckGPT</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="block" id="experience">
+    <div class="wrap sec-head reveal">
+      <div><div class="kicker">03</div><h2>Experience</h2></div>
+      <div class="sec-body">
+        <article class="entry">
+          <div class="entry-top"><h3>Data Analyst Intern</h3><span class="when">Mar 2024 – Jun 2024</span></div>
+          <div class="org">WorldLink Communications Ltd · Marketing Department · Nepal</div>
+          <ul>
+            <li>Delivered marketing analytics for Nepal’s largest ISP (900k+ customers): customer segmentation, churn-risk analysis, competitive mapping and campaign-performance evaluation.</li>
+            <li>Built two end-to-end K-Means pipelines in Python: a four-profile customer-segmentation model and a three-cluster churn-risk model, using the Elbow Method for cluster selection, PCA for visualisation and unit/system tests for validation.</li>
+            <li>Analysed a 1,600-respondent, seven-region customer survey in SPSS, producing region-level frequency and distribution reports.</li>
+            <li>Presented findings directly to the Marketing Manager to shape targeted campaign and retention strategy.</li>
+          </ul>
+          <ul class="tags"><li>Python</li><li>Pandas</li><li>Scikit-learn</li><li>K-Means</li><li>PCA</li><li>SPSS</li></ul>
+        </article>
+        <article class="entry">
+          <div class="entry-top"><h3>Trading Assistant <span style="font-weight:500;color:var(--ink-3);font-family:var(--sans);font-size:.9rem">(part-time)</span></h3><span class="when">Oct 2025 – Present</span></div>
+          <div class="org">Sainsbury’s · London</div>
+          <ul>
+            <li>Work across frozen, fresh, produce and meat departments while studying full-time, following strict food-safety and time-temperature controls.</li>
+            <li>Process warehouse deliveries, fulfil online orders for third-party platforms (Uber Eats, Deliveroo) and use barcode-driven stock systems to prioritise replenishment.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects & Hackathons -->
+  <section class="block" id="projects">
+    <div class="wrap sec-head reveal">
+      <div><div class="kicker">04</div><h2>Projects &amp; Hackathons</h2></div>
+      <div class="sec-body">
+        <div class="cards">
+          <article class="card">
+            <div class="meta">Hackathon · Financial Reporting Council</div>
+            <h3>FRC Hackathon: LLMs on UK Financial Filings</h3>
+            <p>Investigated LLM hallucination failure modes on structured iXBRL filings and restructured XBRL schemas for efficient AI ingestion, working with Companies House data and UK financial reporting standards.</p>
+            <ul class="tags"><li>LLMs</li><li>XBRL</li><li>RegTech</li></ul>
+          </article>
+          <article class="card">
+            <div class="meta">Project · Quantitative Analysis</div>
+            <h3>Discount Impact &amp; Customer Segmentation</h3>
+            <p>Segmented customers into spending profiles with K-Means, predicted high-value transactions using Logistic Regression and Decision Trees, and quantified discount elasticity with Linear Regression (MAE, R²).</p>
+            <ul class="tags"><li>Scikit-learn</li><li>Regression</li><li>Classification</li></ul>
+          </article>
+          <article class="card">
+            <div class="meta">Hackathon · Machine Learning</div>
+            <h3>Exoplanet ML: Probabilistic Forecasting</h3>
+            <p>Built a probabilistic forecasting pipeline using LightGBM quantile regression on HDF5 astronomical data to model prediction uncertainty.</p>
+            <ul class="tags"><li>LightGBM</li><li>Quantile Regression</li><li>HDF5</li></ul>
+          </article>
+          <article class="card">
+            <div class="meta award">Hackathon · 3rd Place</div>
+            <h3>VLGE AI Hackathon</h3>
+            <p>Awarded third place for pitching a technical concept for immersive, AI-driven experiences.</p>
+            <ul class="tags"><li>AI Product</li><li>Pitching</li></ul>
+          </article>
+          <article class="card">
+            <div class="meta">Project · Responsible AI</div>
+            <h3>Responsible AI Framework for NLP Summarisation</h3>
+            <p>Ethical evaluation framework for Meta AI’s BART dialogue summarisation model, covering bias mitigation, privacy and output transparency.</p>
+            <ul class="tags"><li>NLP</li><li>BART</li><li>AI Ethics</li></ul>
+          </article>
+          <article class="card">
+            <div class="meta">Project · Computer Vision</div>
+            <h3>Facial Recognition Voting System</h3>
+            <p>Secure academic voting system combining LBPH / Haar Cascade facial recognition with one-time-password two-factor authentication.</p>
+            <ul class="tags"><li>OpenCV</li><li>Python</li><li>2FA</li></ul>
+          </article>
         </div>
-    </section>
+        <p style="margin-top:24px"><a class="btn btn-ghost btn-sm" href="https://github.com/NikhilRana2076" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>View code on GitHub</a></p>
+      </div>
+    </div>
+  </section>
 
-    <!-- services section start -->
-    <section class="services" id="services">
-        <div class="max-width">
-            <h2 class="title">My services</h2>
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-chart-line "></i>
-                        <div class="text"><a href="https://github.com/NikhilRana2076/PythonAssignment" target="_blank"><b>Data Analysis</b></a></div>
-                        <p>With a strong background in statistical analysis, data manipulation, and visualization,
-                            I excel at translating raw data into meaningful and actionable information to achieve data-informed decision-making.
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text"><a href="http://mandalalasha.byethost13.com/" target="_blank"><b>Web Designing</b></a></div>
-                        <p> I am a creative and detail-oriented web design professional with a passion for creating visually appealing and user-friendly websites.
-                            I excel at translating client requirements into captivating web experiences.  </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text"><a href="https://nikhilrana2076.blogspot.com/" target="_blank"><b>Content Writing</b></a></div>
-                        <p>I am a skilled and versatile blog writer with a passion for creating engaging and informative content. 
-                            With a solid background in writing and a keen understanding of various industries, 
-                            I excel at crafting compelling blog articles that captivate readers and drive engagement. </p>
-          
-                    </div>
-                </div>
-               </div>
-            </div>
+  <!-- Skills -->
+  <section class="block" id="skills">
+    <div class="wrap sec-head reveal">
+      <div><div class="kicker">05</div><h2>Technical Skills</h2></div>
+      <div class="sec-body">
+        <div class="skills">
+          <div class="skill-row"><h3>Programming</h3><ul class="tags"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>SciPy</li><li>PyTorch</li><li>SQL</li><li>C++ (academic)</li><li>Java (academic)</li></ul></div>
+          <div class="skill-row"><h3>AI &amp; Machine Learning</h3><ul class="tags"><li>RAG</li><li>LLM Evaluation</li><li>NLP</li><li>Deep Learning</li><li>K-Means Clustering</li><li>Regression</li><li>LightGBM</li></ul></div>
+          <div class="skill-row"><h3>Quantitative Methods</h3><ul class="tags"><li>Hypothesis Testing</li><li>Confidence Intervals</li><li>Monte Carlo Simulation</li><li>Statistics &amp; Probability</li><li>Numerical Methods</li></ul></div>
+          <div class="skill-row"><h3>Tools &amp; Domain</h3><ul class="tags"><li>Git</li><li>Jupyter</li><li>Linux</li><li>Tableau</li><li>SPSS</li><li>SelfCheckGPT</li><li>iXBRL / XBRL Financial Reporting</li></ul></div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- skills section start -->
-    <section class="skills" id="skills" >
-        <div class="max-width">
-            <h2 class="title" >My skills</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text" style="text-align: left;">My creative skills & experiences.</div>
-                    <p><br>
-                        Basic level of coding skills in C, C++, and SQL. 
-                        <br> <br>
-                        Experience with various data manipulation, visualization and modeling libraries of python. 
-                        <br><br>
-                        Ability to use Microsoft software like Word, Excel, Powerpoint, Power BI.                       
-                        <br><br>
-                        Website designing using HTML, CSS, and php.
-                        <br><br>
-                        Good presentation, communication skills and a friendly nature. 
-                    </p> <br>
-                    <a href="https://github.com/NikhilRana2076" target="_blank">Find more</a>
-                </div>
+  <!-- Education -->
+  <section class="block" id="education">
+    <div class="wrap sec-head reveal">
+      <div><div class="kicker">06</div><h2>Education</h2></div>
+      <div class="sec-body">
+        <article class="entry">
+          <div class="entry-top"><h3>MSc Artificial Intelligence</h3><span class="when">Sep 2025 – Sep 2026</span></div>
+          <div class="org">University of West London, United Kingdom</div>
+          <ul>
+            <li>Current average: 70% across Semesters 1 &amp; 2 (Distinction level)</li>
+            <li>Modules: Big Data Analytics, Deep Learning, Machine Learning, Responsible AI</li>
+            <li>Dissertation: Detecting and Mitigating Hallucinations in LLMs for UK iXBRL Financial Reporting</li>
+          </ul>
+        </article>
+        <article class="entry">
+          <div class="entry-top"><h3>BSc Computer Science &amp; Information Technology</h3><span class="when">2020 – 2024</span></div>
+          <div class="org">Tribhuvan University, Nepal</div>
+          <ul>
+            <li>Grade: 72.43% (UK equivalent: 2:1, Upper Second Class)</li>
+            <li>Modules: Statistics &amp; Probability, Numerical Methods, Simulation &amp; Modelling, Data Mining</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-            </div>
+  <!-- Contact -->
+  <section class="block" id="contact">
+    <div class="wrap sec-head reveal">
+      <div><div class="kicker">07</div><h2>Contact</h2></div>
+      <div class="sec-body contact-grid">
+        <div>
+          <p class="prose" style="color:var(--ink-2)">I am available for graduate and associate roles starting from autumn 2026, and I would be glad to hear from recruiters and hiring teams. The quickest way to reach me is by email or LinkedIn.</p>
+          <ul class="contact-list">
+            <li><svg><use href="#i-mail"/></svg><div><div class="k">Email</div><a class="v" href="mailto:nikhilrana2059@gmail.com">nikhilrana2059@gmail.com</a></div></li>
+            <li><svg><use href="#i-in"/></svg><div><div class="k">LinkedIn</div><a class="v" href="https://www.linkedin.com/in/nikhil-rana2076/" target="_blank" rel="noopener">linkedin.com/in/nikhil-rana2076</a></div></li>
+            <li><svg><use href="#i-gh"/></svg><div><div class="k">GitHub</div><a class="v" href="https://github.com/NikhilRana2076" target="_blank" rel="noopener">github.com/NikhilRana2076</a></div></li>
+            <li><svg><use href="#i-pin"/></svg><div><div class="k">Location</div><span class="v">London, United Kingdom</span></div></li>
+          </ul>
         </div>
-    </section>
+        <form id="contact-form" action="https://formspree.io/f/xpzgalbv" method="POST">
+          <div class="row2">
+            <label>Name<input type="text" name="name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          </div>
+          <label>Company / Organisation <span style="color:var(--ink-3);font-weight:400">(optional)</span><input type="text" name="company" autocomplete="organization"></label>
+          <label>Message<textarea name="message" required></textarea></label>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <!-- teams section start -->
-    <section class="reference" id="reference">
-        <div class="max-width">
-            <h2 class="title">Reference </h2>
-            <div class="carousel owl-carousel">
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-2.jpeg" alt="">
-                        <div class="text"><a href="https://github.com/Bipul6129" target="_blank">Bipul Tamang  </a></div>
-                        <p>Versatile musician who possess programming knowledge in various languages with strong photoshop skills.
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-3.jpeg" alt="">
-                        <div class="text"><a href="https://www.facebook.com/rochak.maharjan.5" target="_blank">Rochak Maharjan</a> </div>
-                        <p>Talented flutist and innovative Figma designer with a passion for creating visually stunning and user-friendly digital experiences. </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-4.jpeg" alt="">
-                        <div class="text"><a href="https://www.instagram.com/mandalala.sha/" target="_blank">Isha Thapa </a> </div>
-                        <p>Creative and versatile interior designer with a unique talent for drawing beautiful mandalas. </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-5.jpeg" alt="">
-                        <div class="text"><a href="https://github.com/prak32" target="_blank">Prakash Shrestha</a></div>
-                        <p>Front-end web developer who has consistently excelled in academics, earning the distinction of being a college topper.</p>
-                    </div>
-                </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/profile-6.jpeg" alt="">
-                            <div class="text"><a href="https://www.facebook.com/alish.thapa.92" target="_blank">Alish Thapa</a></div>
-                            <p>A dedicated and experienced civil engineer with a proven track record of success in delivering high-quality infrastructure projects. </p>
-                     
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="site">
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Nikhil Rana · London, UK</span>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/nikhil-rana2076/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+      <a href="https://github.com/NikhilRana2076" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-gh"/></svg></a>
+      <a href="mailto:nikhilrana2059@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+    </div>
+  </div>
+</footer>
 
-    <!-- contact section start -->
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>I'm a fresher looking for internship and job opportunities. <br>
-                        If you believe that I'm the one you are looking for, then please contact me through the following medium.</p><br>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Nikhil Rana</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-phone"></i>
-                            <div class="info">
-                                <div class="head">Phone</div>
-                                <div class="sub-title">+977-9810202949</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">nikhilrana2076@gmail.com</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="column right">
-                    <div class="text">Email me</div>
-                    <form action="https://formspree.io/f/xpzgalbv" method="POST">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" name="name" placeholder="Name" required>
-                            </div>
-                            <div class="field email">
-                                <input type="email" name="email" placeholder="Email" required>
-                            </div>
-                        </div>
-   
-                        <div class="field textarea">    
-                            <textarea cols="30" rows="10" placeholder="Message..." name="message"required></textarea>
-                        </div>
-                        <div class="button-area">
-                            <button type="submit">Send email</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+(function(){
+  var yr=document.getElementById('yr'); if(yr) yr.textContent=new Date().getFullYear();
 
+  // Sticky nav border
+  var nav=document.querySelector('header.nav');
+  var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>8)};
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
 
-        <!-- footer section-->
-        <footer id="footer">
-            <div class="container-fluid">
-                <!-- social media icons -->
-                <div class="social-icons mt-4">
-                    <a href="https://www.facebook.com/nikhilrana2001" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/nikhil.__.rana" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/NikhilRana2076" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/nikhil-rana2076/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://nikhilrana2076.blogspot.com/" target="_blank"><i class="fab fa-blogger"></i></a>
-                    
-                </div>
+  // Mobile menu
+  var toggle=document.querySelector('.menu-toggle'), menu=document.getElementById('menu');
+  toggle.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open);
+  });
+  menu.addEventListener('click',function(e){
+    if(e.target.closest('a')){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
+  });
 
-            </div>
-            
-        </footer>
+  // Reveal + bars
+  var fillBars=function(root){root.querySelectorAll('.fill').forEach(function(f){f.style.width=f.dataset.w+'%'})};
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');fillBars(en.target);io.unobserve(en.target);} });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')}); fillBars(document);
+  }
 
-    <script src="script.js"></script>
+  // Active nav link
+  var links=[].slice.call(document.querySelectorAll('#menu a[href^="#"]'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean);
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id)})}
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach(function(s){so.observe(s)});
+  }
+
+  // Contact form (Formspree, no page reload)
+  var form=document.getElementById('contact-form'), status=form.querySelector('.form-status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=form.querySelector('button'); btn.disabled=true; status.className='form-status'; status.textContent='Sending…';
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){form.reset();status.className='form-status ok';status.textContent='Thank you, your message has been sent. I will reply as soon as possible.';}
+        else throw new Error();
+      })
+      .catch(function(){status.className='form-status err';status.innerHTML='Sorry, something went wrong. Please email me directly at <a href="mailto:nikhilrana2059@gmail.com">nikhilrana2059@gmail.com</a>.';})
+      .finally(function(){btn.disabled=false;});
+  });
+})();
+</script>
 </body>
 </html>
