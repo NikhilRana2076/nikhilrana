@@ -32,3 +32,6 @@ Live site: https://nikhilrana.com.np/
 Custom events are already tagged: `cv-download`, `email-copy`, `email-click`, `linkedin`, `github`, `blog`, `project`,
 `lens`, `city`, `research-tab`, `bot-ask`, `game-finish`, `quiz-share`, `fpl`, `semester`, `badge`, `sound`, `wave`, `palette-open`, `sunrise` and `contact-form`.
 Umami is cookie-free, so no cookie banner is needed.
+
+## Updating the FPL season snapshot
+The FPL site blocks other websites from loading its data directly, so the "My FPL season in data" panel is a snapshot. To update it, edit the `PTS` and `RANK` arrays (search for `FPL season charts`), the KPI tiles and the "Snapshot after Gameweek N" line in `index.html`. You can also ask Claude to do it from your `/api/entry/2290455/history/` JSON.
