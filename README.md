@@ -12,12 +12,17 @@ Live site: https://nikhilrana.com.np/
 - `CNAME`: custom domain for GitHub Pages
 
 ## Features
-- **Background:** the Himalaya drawn as a ridgeline chart (canvas). The cursor disturbs the signal and a click sends a sound wave through the range.
-- **Role lens** ("I'm hiring for…") tailors the page and highlights the matching skills.
-- **Relocation radar** plotting real UK city coordinates with live distances from London.
-- A **Fact or fabrication?** game built from real dissertation results, plus tabbed research details.
-- A **command palette** (Ctrl/⌘ K or `/`), **Calm mode**, and a hidden **sunrise** easter egg.
-- A **"You, in data"** panel, computed in the browser only.
+- A "Hi, I'm Nikhil Rana" hero with a wave button (greetings in 10 languages) and a rotating tagline.
+- **Background:** the Himalaya as a ridgeline chart. The cursor disturbs it and a click sends a sound wave. It is frame-capped for smooth cursor movement.
+- **Role lens:** 8 roles (Responsible AI, ML, Data Science, Data Eng, DB/SQL, Analyst, Finance, Ops) that retailor the page.
+- **Research tabs:**
+  - Ask the filing (replays real Vodafone, Tesco, Lloyds and Sainsbury's results)
+  - Anatomy of an iXBRL tag
+  - Fact or fabrication? (7 questions)
+  - Results chart
+- **FPL captaincy lab:** sliders, radar chart, score and verdict.
+- **BSc module explorer**, **relocation radar** and **tools filter**.
+- **Explorer badges** (11) saved in localStorage, optional **ambient sound** (Web Audio singing bowl + wind), **quick menu** (Ctrl/⌘ K), **Calm mode** and a hidden sunrise easter egg.
 
 ## Private visitor statistics (Umami Cloud)
 1. Create a free account at https://cloud.umami.is and add the website `nikhilrana.com.np`.
@@ -25,5 +30,5 @@ Live site: https://nikhilrana.com.np/
 3. Push. Your dashboard (visitors, page views, visit duration, countries, devices and referrers) is private to your login.
 
 Custom events are already tagged: `cv-download`, `email-copy`, `email-click`, `linkedin`, `github`, `blog`, `project`,
-`lens`, `city`, `research-tab`, `game-finish`, `palette-open`, `sunrise`, `you-in-data` and `contact-form`.
+`lens`, `city`, `research-tab`, `bot-ask`, `game-finish`, `quiz-share`, `fpl`, `semester`, `badge`, `sound`, `wave`, `palette-open`, `sunrise` and `contact-form`.
 Umami is cookie-free, so no cookie banner is needed.
