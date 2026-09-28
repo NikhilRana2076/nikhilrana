@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nikhil Rana</title>
+<title>Nikhil Rana — Responsible AI, ML & Data</title>
 <meta name="description" content="Hi, I'm Nikhil Rana, an MSc Artificial Intelligence graduate working across responsible AI, machine learning, data science and data engineering. I built an LLM system that answers questions about UK company accounts from their own iXBRL tags, lifting accuracy from 45.1% to 92.2%. Based in London and open to relocating across the UK.">
 <meta name="author" content="Nikhil Rana">
 <link rel="canonical" href="https://nikhilrana.com.np/">
@@ -24,7 +24,7 @@
      Only you can see the dashboard.
      ============================================================ -->
 <script>
-  window.UMAMI_WEBSITE_ID = "1078d0e6-7083-4487-8978-2a8858984ba8";   // ← paste your Umami Website ID here
+  window.UMAMI_WEBSITE_ID = "";   // ← paste your Umami Website ID here
   (function(id){ if(!id) return; var s=document.createElement('script'); s.defer=true;
     s.src='https://cloud.umami.is/script.js'; s.setAttribute('data-website-id',id);
     s.setAttribute('data-domains','nikhilrana.com.np,www.nikhilrana.com.np'); document.head.appendChild(s);
@@ -37,7 +37,7 @@
   "@type": "Person",
   "name": "Nikhil Rana",
   "url": "https://nikhilrana.com.np/",
-  "email": "mailto:nikhilrana2076@gmail.com",
+  "email": "mailto:nikhilrana2059@gmail.com",
   "jobTitle": "AI & Data Graduate",
   "address": {"@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB"},
   "alumniOf": [
@@ -117,6 +117,10 @@ body.calm .c-dot,body.calm .c-ring{display:none}
 body.calm.cursor-on,body.calm.cursor-on a,body.calm.cursor-on button{cursor:auto}
 
 /* ---------- Nav ---------- */
+.nav{transition:transform .35s var(--ease),opacity .35s}
+.dock{transition:transform .35s var(--ease),opacity .35s}
+body.scroll-down .nav{transform:translate(-50%,calc(-100% - 20px));opacity:0}
+body.scroll-down .dock{transform:translateY(calc(100% + 20px));opacity:0;pointer-events:none}
 .progress{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--grad);transform-origin:0 50%;transform:scaleX(0);z-index:220}
 .nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:200;width:min(calc(100% - 28px),var(--max))}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 16px;border-radius:999px;background:rgba(10,14,21,.8);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
@@ -158,7 +162,10 @@ body.calm.cursor-on,body.calm.cursor-on a,body.calm.cursor-on button{cursor:auto
 .wave-btn:hover{border-color:var(--a1);transform:scale(1.08)}
 .wave-btn span{display:inline-block;transform-origin:70% 80%;animation:wave 2.6s ease-in-out infinite}
 @keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(16deg)}20%,40%{transform:rotate(-8deg)}50%{transform:rotate(10deg)}}
-.greet{font-family:var(--mono);font-size:.95rem;color:var(--a1);min-width:12ch}
+.greet{font-family:var(--serif);font-style:italic;font-size:1.6rem;line-height:1.2;color:var(--a1);min-width:9ch}
+.swap{display:inline-block;transition:opacity .45s var(--ease),transform .45s var(--ease),filter .45s var(--ease)}
+.swap.out{opacity:0;transform:translateY(-.35em);filter:blur(6px)}
+.swap.pre{transition:none;opacity:0;transform:translateY(.35em);filter:blur(6px)}
 .hero h1{font-size:clamp(2.7rem,8vw,7.2rem);line-height:.95;letter-spacing:-.05em;margin-bottom:18px}
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.07em;white-space:nowrap}
 .hero h1 .line>span{display:inline-block;transform:translateY(105%);animation:rise 1.1s var(--ease) forwards}
@@ -191,8 +198,14 @@ body[data-lens="rai"] li[data-r~="rai"],body[data-lens="ml"] li[data-r~="ml"],bo
 .section{padding:116px 0;position:relative}
 .section.solid{background:rgba(5,7,11,.86)}
 .s-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:50px;flex-wrap:wrap}
-.s-kicker{display:flex;align-items:center;gap:12px;color:var(--ink-3);margin-bottom:18px}
-.s-kicker::before{content:"";width:28px;height:1px;background:var(--grad)}
+.s-kicker{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;color:var(--ink-3);margin-bottom:18px}
+.s-kicker .k-n{color:var(--a1);font-weight:500}
+.s-kicker .k-t{flex:1 1 0;min-width:0}
+.s-kicker::before{content:"";width:28px;height:1px;background:var(--grad);align-self:center}
+.section{border-top:1px solid var(--line)}
+.section::before{content:"";position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:min(560px,70%);height:1px;background:linear-gradient(90deg,transparent,var(--a1),var(--a2),transparent);opacity:.7}
+.section[data-n]::after{content:attr(data-n);position:absolute;top:34px;right:max(16px,calc((100% - var(--max))/2 + 32px));font:600 clamp(5rem,13vw,10rem)/1 var(--display);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.09);pointer-events:none;z-index:0}
+.section>.wrap{position:relative;z-index:1}
 .s-head h2{font-size:clamp(2.1rem,4.8vw,3.8rem);letter-spacing:-.04em;max-width:18ch}
 .s-head p{color:var(--ink-2);max-width:440px;margin:0}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -698,6 +711,8 @@ footer button:hover,footer a:hover{color:var(--ink)}
   .nav{top:10px;width:calc(100% - 20px)}
   .nav-cta .btn,.kbtn .lbl{display:none}
   .section{padding:90px 0}
+  .tagline{min-height:2.6em}
+  .section[data-n]::after{top:26px;font-size:4.6rem}
   .s-head{margin-bottom:34px}
   .hero{padding:112px 0 50px}
   .hero h1{font-size:clamp(2.6rem,13vw,4rem)}
@@ -791,7 +806,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
 <section class="hero" id="top">
   <div class="wrap">
     <div class="status"><span class="pulse"></span>Open to graduate roles · London or relocating anywhere in the UK · No visa sponsorship needed until late 2028</div>
-    <div class="hello"><button class="wave-btn" id="wave-btn" aria-label="Wave back"><span>👋</span></button><span class="greet" id="greet" aria-live="polite">Hello there</span></div>
+    <div class="hello"><button class="wave-btn" id="wave-btn" aria-label="Wave back"><span>👋</span></button><span class="greet" id="greet">Hello</span></div>
     <h1>
       <span class="line"><span>Hi, I’m</span></span>
       <span class="line"><span><em class="grad">Nikhil Rana.</em></span></span>
@@ -801,7 +816,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
       <div>
         <p class="lead">I’m an MSc Artificial Intelligence graduate working across <strong>responsible AI, machine learning, data science and data engineering</strong>. I built an LLM system that answers questions about UK company accounts straight from their own machine-readable tags, which lifted accuracy from <strong>45.1% to 92.2%</strong>.</p>
         <div class="hero-actions">
-          <a class="btn btn-solid" href="https://ixbrl-grounded-qa.onrender.com/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="hero">Try the live app <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-solid" href="https://ixbrl.nikhilrana.com.np/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="hero">Try the live app <svg><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost" href="#research">See the research</a>
           <a class="btn btn-ghost" href="assets/Nikhil_Rana_CV.pdf" target="_blank" rel="noopener" data-umami-event="cv-download" data-umami-event-where="hero">Download CV <svg><use href="#i-dl"/></svg></a>
         </div>
@@ -964,7 +979,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <p>UK accounts are filed in <strong>iXBRL (Inline XBRL)</strong>. The document looks like a normal web page to a person, but every figure is wrapped in a tag that says exactly what it is: its accounting concept, period, currency, scale and any breakdown. My system parses those tags into a database and answers questions <strong>only from the tagged facts</strong>, and if the fact isn’t there, it says so.</p>
         <p class="meta">Tested on 12 filings (Tesco, Lloyds, AstraZeneca, National Grid and more) · 102-question benchmark · Claude Sonnet 4.6 &amp; GPT-5.6 Terra · Supervised by Dr Ali Gheitasy</p>
       </div>
-      <div class="soon live"><span class="pulse"></span><span><span class="hl">The app is live.</span> Upload any UK Companies House iXBRL filing (up to 25&nbsp;MB) and ask questions in plain English. Every answer is traced to the tagged fact behind it. 10 free questions per session on GPT-5.6 Terra; Claude Sonnet 4.6 by access code. The assistant below replays results from my study.<span style="display:block;margin-top:6px;font-size:.78rem;color:var(--ink-3)">Free hosting, so the first load can take up to a minute to wake up.</span></span><a class="btn btn-sm btn-solid" href="https://ixbrl-grounded-qa.onrender.com/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="research">Open the app <svg><use href="#i-arrow"/></svg></a></div>
+      <div class="soon live"><span class="pulse"></span><span><span class="hl">The app is live.</span> Upload any UK Companies House iXBRL filing (up to 25&nbsp;MB) and ask questions in plain English. Every answer is traced to the tagged fact behind it. 10 free questions per session on GPT-5.6 Terra; Claude Sonnet 4.6 by access code. The assistant below replays results from my study.<span style="display:block;margin-top:6px;font-size:.78rem;color:var(--ink-3)">Free hosting, so the first load can take up to a minute to wake up.</span></span><a class="btn btn-sm btn-solid" href="https://ixbrl.nikhilrana.com.np/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="research">Open the app <svg><use href="#i-arrow"/></svg></a></div>
     </div>
 
     <div class="kpis">
@@ -1075,7 +1090,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
             <li>Reporting framework and company size are confounded in the corpus.</li>
             <li>The planned independent dual review couldn’t be completed.</li></ul></div>
           <div><h4>Where I’d take it next</h4><ul>
-            <li><s>Launch the public demo app</s> Done: <a class="u" href="https://ixbrl-grounded-qa.onrender.com/" target="_blank" rel="noopener">it’s live</a>.</li>
+            <li><s>Launch the public demo app</s> Done: <a class="u" href="https://ixbrl.nikhilrana.com.np/" target="_blank" rel="noopener">it’s live</a>.</li>
             <li>Scale towards 50 filings and 500 questions.</li>
             <li>Build a detector that checks against <em>all</em> legitimate tagged values.</li>
             <li>Test a finance-specialised model such as FinGPT or FinMA.</li></ul></div>
@@ -1100,14 +1115,14 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <p>An evaluation framework for Meta AI’s BART dialogue-summarisation model covering bias mitigation, privacy and output transparency. It asks whether a model should be deployed as well as whether it works.</p>
         <div class="tags"><span class="tag">NLP</span><span class="tag">BART</span><span class="tag">AI Ethics</span></div>
       </a>
-      <a class="proj glow reveal d1" data-r="ds ml da" href="https://github.com/NikhilRana2076/Impact_of_Discount_on_Customers" target="_blank" rel="noopener" data-cursor="Code" data-umami-event="project" data-umami-event-name="discount-impact">
+      <a class="proj glow reveal d1" data-r="ds ml da" href="https://github.com/NikhilRana2076" target="_blank" rel="noopener" data-cursor="Code" data-umami-event="project" data-umami-event-name="discount-impact">
         <div class="top"><span class="idx">02</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span></div>
         <div class="kind mono">Data science</div>
         <h3>Discount Impact &amp; Customer Segmentation</h3>
         <p>Do discounts really drive bigger spends? I segmented customers with K-Means, predicted high-value transactions with Logistic Regression and Decision Trees, and measured discount elasticity with Linear Regression (MAE, R²).</p>
         <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">Regression</span><span class="tag">Clustering</span></div>
       </a>
-      <a class="proj glow reveal d2" data-r="ml de" href="https://github.com/NikhilRana2076/FRVSO" target="_blank" rel="noopener" data-cursor="Code" data-umami-event="project" data-umami-event-name="face-voting">
+      <a class="proj glow reveal d2" data-r="ml de" href="https://github.com/NikhilRana2076" target="_blank" rel="noopener" data-cursor="Code" data-umami-event="project" data-umami-event-name="face-voting">
         <div class="top"><span class="idx">03</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span></div>
         <div class="kind mono">Computer vision · Security</div>
         <h3>Facial Recognition Voting System</h3>
@@ -1314,7 +1329,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         </div>
         <p class="contact-note">Available from autumn 2026 · Graduate visa, no sponsorship needed until late 2028.</p>
       </div>
-      <form class="glow reveal d1" id="contact-form" action="https://formspree.io/f/xgavlpvg" method="POST">
+      <form class="glow reveal d1" id="contact-form" action="https://formspree.io/f/xpzgalbv" method="POST">
         <div class="row2">
           <label>Name<input type="text" name="name" autocomplete="name" required></label>
           <label>Email<input type="email" name="email" autocomplete="email" required></label>
@@ -1510,15 +1525,22 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   $$('.glow').forEach(function(el){var pend=null;el.addEventListener('pointermove',function(e){if(pend)return;var cx=e.clientX,cy=e.clientY;pend=requestAnimationFrame(function(){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(cx-r.left)+'px');el.style.setProperty('--my',(cy-r.top)+'px');pend=null})},{passive:true})});
 
   /* ---------- Greeting + rotating tagline ---------- */
-  var HELLOS=['Hello there','Namaste 🙏','Hola','Bonjour','Ciao','Konnichiwa','Hallo','Olá','Salaam','Annyeong'],hi=0,greet=$('#greet');
-  $('#wave-btn').addEventListener('click',function(){hi=(hi+1)%HELLOS.length;scramble(greet,HELLOS[hi]);bowl(SCALE[hi%SCALE.length]);unlock('hello');track('wave')});
+  var HELLOS=['Hello','Namaste 🙏','Hola','Bonjour','Ciao','Konnichiwa','Hallo','Olá','Salaam','Annyeong'],hi=0,greet=$('#greet');
+  function swapText(el,to){if(still()){el.textContent=to;return}el.classList.add('swap','out');setTimeout(function(){el.textContent=to;el.classList.remove('out');el.classList.add('pre');void el.offsetWidth;el.classList.remove('pre')},450)}
+  var helloT=null;function helloLoop(){clearInterval(helloT);helloT=setInterval(function(){if(still()||document.hidden)return;hi=(hi+1)%HELLOS.length;swapText(greet,HELLOS[hi])},2600)}helloLoop();
+  $('#wave-btn').addEventListener('click',function(){hi=(hi+1)%HELLOS.length;swapText(greet,HELLOS[hi]);helloLoop();bowl(SCALE[hi%SCALE.length]);unlock('hello');track('wave')});
   var ROT=['shows its working.','tells the truth.','respects your data.','cites its sources.','knows when to say “not found”.'],ri=0,rot=$('#rot');
   var glyphs='!<>-_\\/[]{}—=+*^?#01';
   function scramble(el,to){if(still()){el.textContent=to;return}var from=el.textContent,len=Math.max(from.length,to.length),q=[],f=0;
     for(var i=0;i<len;i++){var s=Math.floor(Math.random()*16);q.push({f:from[i]||'',t:to[i]||'',s:s,e:s+Math.floor(Math.random()*16),c:''})}
     (function tk(){var out='',done=0;for(var i=0;i<q.length;i++){var o=q[i];if(f>=o.e){done++;out+=esc(o.t)}else if(f>=o.s){if(!o.c||Math.random()<.28)o.c=glyphs[Math.floor(Math.random()*glyphs.length)];out+='<span style="opacity:.5">'+esc(o.c)+'</span>'}else out+=esc(o.f)}
       el.innerHTML=out;if(done<q.length){f++;requestAnimationFrame(tk)}})()}
-  setInterval(function(){if(still()||document.hidden)return;ri=(ri+1)%ROT.length;scramble(rot,ROT[ri])},3400);
+  setInterval(function(){if(still()||document.hidden)return;ri=(ri+1)%ROT.length;swapText(rot,ROT[ri])},3800);
+  /* chapter numbers + hide header/dock while scrolling down */
+  $$('.s-kicker').forEach(function(k){var m=k.textContent.match(/^(\d\d)\s*—\s*(.*)$/);if(!m)return;k.innerHTML='<span class="k-n">'+m[1]+'</span><span class="k-t">'+esc(m[2])+'</span>';var sec=k.closest('.section');if(sec)sec.setAttribute('data-n',m[1])});
+  (function(){var lastY=scrollY,tk=false;addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){var y=scrollY,d=y-lastY;
+    if(Math.abs(d)>6){var down=d>0&&y>160&&!document.querySelector('.panel.open')&&!document.querySelector('.menu.open,#menu.open');document.body.classList.toggle('scroll-down',down);lastY=y}
+    if(y<160||innerHeight+y>=document.documentElement.scrollHeight-40)document.body.classList.remove('scroll-down');tk=false})},{passive:true})})();
 
   /* ---------- Role lens ---------- */
   var LENS={
@@ -1795,7 +1817,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   var cmdk=$('#cmdk'),cin=$('#cmdk-in'),clist=$('#cmdk-list'),csel=0,cshown=[],lastFocus=null;
   function go(id,tab){return function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:still()?'auto':'smooth'});if(tab)setTimeout(function(){$('#'+tab).click()},300)}}
   function copyEmail(){(navigator.clipboard?navigator.clipboard.writeText('nikhilrana2059@gmail.com'):Promise.reject()).then(function(){toast('Email copied ✓')},function(){toast('nikhilrana2059@gmail.com')});track('email-copy',{where:'palette'})}
-  var CMDS=[['Open the live iXBRL app','App',function(){track('live-app',{where:'palette'});window.open('https://ixbrl-grounded-qa.onrender.com/','_blank')}],['Ask the iXBRL assistant','Demo',go('research','t-bot')],['Play “Fact or fabrication?”','Game',go('research','t-game')],['See the anatomy of an iXBRL tag','Learn',go('research','t-tag')],['Open the FPL captaincy lab','Fun',go('fpl')],
+  var CMDS=[['Open the live iXBRL app','App',function(){track('live-app',{where:'palette'});window.open('https://ixbrl.nikhilrana.com.np/','_blank')}],['Ask the iXBRL assistant','Demo',go('research','t-bot')],['Play “Fact or fabrication?”','Game',go('research','t-game')],['See the anatomy of an iXBRL tag','Learn',go('research','t-tag')],['Open the FPL captaincy lab','Fun',go('fpl')],
     ['Go to About','Section',go('about')],['Where I can relocate','Section',go('relocate')],['Go to Experience','Section',go('experience')],['Go to Research','Section',go('research')],['Go to Projects & hackathons','Section',go('projects')],
     ['Go to Tools & Domains','Section',go('toolkit')],['Explore my BSc modules','Section',go('education')],['Contact me','Section',go('contact')],
     ['Copy my email address','Action',copyEmail],['Download my CV','Action',function(){track('cv-download',{where:'palette'});window.open('assets/Nikhil_Rana_CV.pdf','_blank')}],
