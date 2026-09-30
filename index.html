@@ -317,6 +317,7 @@ body[data-lens="rai"] li[data-r~="rai"],body[data-lens="ml"] li[data-r~="ml"],bo
 .meta{color:var(--ink-3);font-size:.84rem}
 .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
 .kpi{padding:24px}
+.app-kpis .kpi .n{font-size:clamp(1.6rem,2.6vw,2.1rem)}
 .kpi .n{font-size:clamp(2rem,3.6vw,2.8rem);font-weight:600;letter-spacing:-.04em;line-height:1;white-space:nowrap;font-variant-numeric:tabular-nums}
 .kpi .n small{font-size:.45em;color:var(--ink-3);font-weight:500;letter-spacing:-.01em}
 .kpi h4{font-size:1rem;margin:14px 0 6px}
@@ -870,7 +871,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     <div class="about-grid">
       <div class="about-text reveal">
         <p>I grew up in Nepal and studied <strong>Computer Science &amp; IT at Tribhuvan University</strong>, where databases, statistics and simulation became my favourite tools. The course took me from Database Management Systems through Data Warehousing &amp; Data Mining to Advanced Database and a Database Administration elective, and my first data role was at <strong>WorldLink Communications</strong>, Nepal’s largest internet provider.</p>
-        <p>In 2025 I moved to London for an <strong>MSc in Artificial Intelligence</strong> at the University of West London, where I’m on track for a Distinction. For my dissertation I engineered a full pipeline, from raw filings to parser, database, retrieval, LLM and evaluation, to find out whether AI can be trusted with company accounts.</p>
+        <p>In 2025 I moved to London for an <strong>MSc in Artificial Intelligence</strong> at the University of West London, where I’m on track for a Distinction, the master’s equivalent of a First. For my dissertation I engineered a full pipeline, from raw filings to parser, database, retrieval, LLM and evaluation, to find out whether AI can be trusted with company accounts.</p>
         <p>I’m open to roles in <strong>responsible AI, ML engineering, data science, data engineering, databases and analytics</strong>. What drives me is simple: technology should be honest with the people who rely on it. I like to understand a problem deeply before I solve it, I listen more than I talk, and I do my best work on things that matter to someone.</p>
       </div>
       <div class="bring reveal d1">
@@ -885,7 +886,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
       <div class="stat"><div class="n"><span class="grad" data-count="92.2" data-dec="1" data-suf="%">0%</span></div><div class="l">LLM accuracy on UK company filings, up from 45.1%</div></div>
       <div class="stat"><div class="n" data-count="7106" data-sep="1">0</div><div class="l">Tagged facts engineered into a structured database</div></div>
       <div class="stat"><div class="n" data-count="900" data-suf="k+">0</div><div class="l">Customer accounts at the ISP where I built segmentation models</div></div>
-      <div class="stat"><div class="n grad">Distinction</div><div class="l">Expected MSc classification, with a 70%+ average</div></div>
+      <div class="stat"><div class="n grad">Distinction</div><div class="l">Expected MSc classification</div></div>
     </div>
     <div class="principles-wrap reveal">
       <div class="sub-h" style="margin-bottom:18px"><h3>How I build AI <em class="grad">for people</em></h3><span class="mono" style="color:var(--ink-3)">5 principles · tap to expand</span></div>
@@ -916,7 +917,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   <div class="wrap">
     <div class="s-head">
       <div><div class="s-kicker mono reveal">02 — Experience</div><h2 class="reveal">Where I’ve <em class="grad">worked</em></h2></div>
-      <p class="reveal">From analysing 900,000+ customer accounts to keeping a busy London store compliant and stocked.</p>
+      <p class="reveal">From analysing 900,000+ customer accounts, to running a startup’s website and admin, to keeping a busy London store compliant and stocked.</p>
     </div>
     <div class="timeline">
       <article class="job glow reveal">
@@ -952,6 +953,24 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         </div>
       </article>
       <article class="job glow reveal">
+        <div>
+          <div class="when">AUG 2024 — JUL 2025</div>
+          <div class="where">Kathmandu, Nepal · Full-time</div>
+          <div class="ctx">A construction and interior fit-out startup covering design, civil works and project management for hotels, cafés, clinics and homes.</div>
+        </div>
+        <div>
+          <h3>Operations Administrator</h3>
+          <div class="org">Project Partner Solution · <a class="u" href="https://projectpartnersolution.com" target="_blank" rel="noopener" data-umami-event="ext-link" data-umami-event-where="pps">projectpartnersolution.com</a></div>
+          <ul>
+            <li data-r="de ops"><strong>Built and ran the company website:</strong> designed and launched the site that shows the firm’s services and projects, then kept it live and up to date. I managed the hosting in <strong>cPanel</strong> and the domain’s <strong>DNS in Cloudflare</strong>.</li>
+            <li data-r="ops da"><strong>Client-facing work:</strong> handled client communications and prepared <strong>PowerPoint</strong> slides for customer meetings.</li>
+            <li data-r="ops da"><strong>Admin and finance tracking:</strong> kept <strong>Excel</strong> records of expenditure and day-to-day office administration, so the small team always knew where spending stood.</li>
+          </ul>
+          <div class="tags"><span class="tag" data-r="de ops">cPanel</span><span class="tag" data-r="de ops">Cloudflare DNS</span><span class="tag" data-r="ops da">Excel</span><span class="tag" data-r="ops da">PowerPoint</span><span class="tag" data-r="ops">Client communication</span><span class="tag" data-r="ops">Office administration</span></div>
+          <p class="tags-hint">Tap any skill to see where I’ve used it.</p>
+        </div>
+      </article>
+      <article class="job glow reveal">
         <div><div class="when">OCT 2025 — PRESENT</div><div class="where">London · Part-time</div></div>
         <div>
           <h3>Trading Assistant</h3>
@@ -979,13 +998,20 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <p>UK accounts are filed in <strong>iXBRL (Inline XBRL)</strong>. The document looks like a normal web page to a person, but every figure is wrapped in a tag that says exactly what it is: its accounting concept, period, currency, scale and any breakdown. My system parses those tags into a database and answers questions <strong>only from the tagged facts</strong>, and if the fact isn’t there, it says so.</p>
         <p class="meta">Tested on 12 filings (Tesco, Lloyds, AstraZeneca, National Grid and more) · 102-question benchmark · Claude Sonnet 4.6 &amp; GPT-5.6 Terra · Supervised by Dr Ali Gheitasy</p>
       </div>
-      <div class="soon live"><span class="pulse"></span><span><span class="hl">The app is live.</span> Upload any UK Companies House iXBRL filing (up to 25&nbsp;MB) and ask questions in plain English. Every answer is traced to the tagged fact behind it. 10 free questions per session on GPT-5.6 Terra; Claude Sonnet 4.6 by access code. The assistant below replays results from my study.<span style="display:block;margin-top:6px;font-size:.78rem;color:var(--ink-3)">Free hosting, so the first load can take up to a minute to wake up.</span></span><a class="btn btn-sm btn-solid" href="https://ixbrl.nikhilrana.com.np/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="research">Open the app <svg><use href="#i-arrow"/></svg></a></div>
+      <div class="soon live"><span class="pulse"></span><span><span class="hl">The app is live.</span> Upload any UK Companies House iXBRL filing (up to 25&nbsp;MB) and ask questions in plain English. Every answer is traced to the tagged fact behind it. New: built-in sample filings, and a table of every tagged figure. 25 free questions per session (up to 50 a day) on GPT-5.6 Terra; Claude Sonnet 4.6 by access code. The assistant below replays results from my study.<span style="display:block;margin-top:6px;font-size:.78rem;color:var(--ink-3)">Free hosting, so the first load can take up to a minute to wake up.</span></span><a class="btn btn-sm btn-solid" href="https://ixbrl.nikhilrana.com.np/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="research">Open the app <svg><use href="#i-arrow"/></svg></a></div>
     </div>
 
     <div class="kpis">
       <div class="kpi glow reveal" data-r="ml rai de"><div class="n grad" data-count="92.2" data-dec="1" data-suf="%">0%</div><h4>Accuracy with tag-aware retrieval</h4><p>Up from 45.1% (+47.1 pp, 95% CI [37.3, 56.9]). GPT-5.6 Terra replicated the gain: 43.1% → 84.3%.</p></div>
       <div class="kpi glow reveal d1" data-r="rai ds"><div class="n"><span style="color:var(--c-abstain)">52%</span> <small>vs</small> <span style="color:var(--c-wrong)">2.9%</span></div><h4>The AI didn’t lie. It went quiet.</h4><p>Without retrieval, the models mostly said “not found”, and confident wrong answers were rare.</p></div>
       <div class="kpi glow reveal d2" data-r="rai fin"><div class="n">0 <small>/ 3</small></div><h4>The detector was blind</h4><p>A SelfCheckGPT-style check caught none of the errors, because financial facts can have more than one valid answer.</p></div>
+    </div>
+
+    <p class="mono reveal" style="color:var(--ink-3);margin:6px 0 12px">The live app, and how it’s kept honest</p>
+    <div class="kpis app-kpis">
+      <div class="kpi glow reveal" data-r="rai fin da"><div class="n grad">1 click</div><h4>Sample filings built in</h4><p>No idea where to find an iXBRL filing? Pick a ready-made sample in the app and start asking straight away. No finance background needed.</p></div>
+      <div class="kpi glow reveal d1" data-r="de fin da"><div class="n grad">Every figure</div><h4>Explore all tagged figures</h4><p>Upload a filing and browse every tagged figure in a searchable table (name, value, period and breakdowns), without writing a single prompt.</p></div>
+      <div class="kpi glow reveal d2" data-r="ml de rai"><div class="n grad">54 tests</div><h4>Regression suite in CI</h4><p>GitHub Actions runs a free retrieval check on every pull request (93% recall@15), end-to-end accuracy runs (66% correct, 5% wrong) under a $0.50 spend cap, and 54 automated tests.</p></div>
     </div>
 
     <div class="rbox glow reveal">
@@ -1188,6 +1214,9 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
       <div class="domain glow reveal" data-r="fin"><div class="ic"><svg><use href="#i-pound"/></svg></div><h3>Financial reporting &amp; RegTech</h3><p>iXBRL, IFRS vs FRS 102, extension concepts, and Companies House and FCA sources.</p><div class="ev">Evidence · Dissertation · FRC Hackathon</div></div>
       <div class="domain glow reveal d1" data-r="da ds"><div class="ic"><svg><use href="#i-signal"/></svg></div><h3>Customer analytics</h3><p>Segmentation, churn risk, survey analysis and competitive mapping for a 900k+ customer ISP.</p><div class="ev">Evidence · WorldLink internship</div></div>
       <div class="domain glow reveal d2" data-r="ops"><div class="ic"><svg><use href="#i-cart"/></svg></div><h3>Retail operations</h3><p>Stock systems, deliveries, online fulfilment and food-safety compliance.</p><div class="ev">Evidence · Sainsbury’s</div></div>
+      <div class="domain glow reveal" data-r="de ops"><div class="ic"><svg><use href="#i-pipe"/></svg></div><h3>Web hosting &amp; DNS</h3><p>Built and ran a company website, with hosting managed in cPanel and DNS in Cloudflare.</p><div class="ev">Evidence · Project Partner Solution</div></div>
+      <div class="domain glow reveal d1" data-r="ops da"><div class="ic"><svg><use href="#i-talk"/></svg></div><h3>Office &amp; client administration</h3><p>Client communications, PowerPoint slides for customer meetings, and Excel records of expenditure.</p><div class="ev">Evidence · Project Partner Solution</div></div>
+      <div class="domain glow reveal d2" data-r="de ml"><div class="ic"><svg><use href="#i-chart"/></svg></div><h3>Software engineering &amp; CI</h3><p>Git, GitHub Actions, pytest and Flask, with an automated regression suite guarding a live app.</p><div class="ev">Evidence · TagTrace live app</div></div>
     </div>
   </div>
 </section>
@@ -1201,7 +1230,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <span class="when mono">Sep 2025 — Sep 2026</span>
         <h3>MSc Artificial Intelligence</h3>
         <div class="org">University of West London, UK</div>
-        <div class="grade"><b class="grad">Distinction</b><span>Expected classification · 70%+ average</span></div>
+        <div class="grade"><b class="grad">Distinction</b><span>Expected classification</span></div>
         <div class="sems sems3" role="tablist" aria-label="MSc semester" id="sems-msc"></div>
         <div class="mods" id="mods-msc" aria-live="polite"></div>
       </article>
@@ -1209,7 +1238,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <span class="when mono">2020 — 2024</span>
         <h3>BSc Computer Science &amp; IT</h3>
         <div class="org">Tribhuvan University, Nepal</div>
-        <div class="grade"><b>2:1</b><span>72.43% · UK Upper Second Class equivalent</span></div>
+        <div class="grade"><b>2:1</b><span>UK Upper Second Class equivalent</span></div>
         <div class="sems" role="tablist" aria-label="Semester" id="sems"></div>
         <div class="mods" id="mods" aria-live="polite"></div>
         <p class="mod-note">Modules from the TU BSc CSIT curriculum, including my Database Administration elective. Highlighted modules map to data and AI roles.</p>
@@ -1495,8 +1524,10 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     'K-Means':['WorldLink: four customer segments and a three-cluster churn-risk model','Discount-impact project: customer spending profiles'],
     'PCA':['WorldLink: 2-D visualisation of customer clusters'],
     'SPSS':['WorldLink: 1,600-respondent, seven-region customer survey'],
-    'Excel':['WorldLink: data collection, storage and basic preprocessing'],
-    'PowerPoint':['WorldLink: presenting findings to the marketing team'],
+    'Excel':['WorldLink: data collection, storage and basic preprocessing','Project Partner Solution: expenditure and admin records'],
+    'cPanel':['Project Partner Solution: managed the company’s web hosting'],'Cloudflare DNS':['Project Partner Solution: managed the domain’s DNS records'],
+    'Client communication':['Project Partner Solution: day-to-day client communications'],'Office administration':['Project Partner Solution: general office administration and record keeping'],
+    'PowerPoint':['WorldLink: presenting findings to the marketing team','Project Partner Solution: slides for customer meetings'],
     'NLP':['Responsible-AI framework for BART dialogue summarisation','MSc dissertation: LLM question answering'],
     'BART':['Evaluated Meta AI’s BART summariser for bias, privacy and transparency'],
     'AI Ethics':['Responsible-AI framework project','MSc Responsible AI module','UK GDPR assessment and ethics approval for my dissertation'],
@@ -1551,7 +1582,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     dba:'<b>Databases &amp; SQL:</b> I designed the fact-store schema and SQL retrieval in my dissertation, on top of a BSc covering Database Management Systems, Data Warehousing &amp; Data Mining, Advanced Database and a <b>Database Administration</b> elective. <a class="go" href="#education">Explore my modules →</a>',
     da:'<b>Data analysis:</b> I segmented and analysed churn for a 900k+ account ISP, analysed a 1,600-respondent survey in SPSS, and presented the findings to managers. <a class="go" href="#experience">See my experience →</a>',
     fin:'<b>Finance &amp; RegTech:</b> hands-on with UK statutory filings (iXBRL, IFRS, FRS 102) and a Financial Reporting Council hackathon, building AI that answers questions about company accounts without inventing figures. <a class="go" href="#research">See the research →</a>',
-    ops:'<b>Operations:</b> reliable and organised, I work to strict compliance procedures at Sainsbury’s while studying full-time, write clear reports and use Excel, PowerPoint and SPSS confidently. <a class="go" href="#experience">See my experience →</a>'};
+    ops:'<b>Operations:</b> reliable and organised, I ran a construction startup’s website, hosting and admin for a year, work to strict compliance procedures at Sainsbury’s while studying full-time, write clear reports and use Excel, PowerPoint and SPSS confidently. <a class="go" href="#experience">See my experience →</a>'};
   var LTOOL={rai:'ml',ml:'ml',ds:'ds',de:'de',dba:'de',da:'ds',fin:'all',ops:'office'},lensOut=$('#lens-out'),lensDefault=lensOut.innerHTML;
   $$('#lens button').forEach(function(b){b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')==='true';$$('#lens button').forEach(function(x){x.setAttribute('aria-pressed','false')});
     if(on){document.body.removeAttribute('data-lens');lensOut.innerHTML=lensDefault;filterTools('all');return}
@@ -1703,7 +1734,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   var TOOLS=[['Python','Language',5,'ml ds de'],['SQL','Querying',4,'de ds'],['SQLite','Database',4,'de'],['Database design','ER modelling · normalisation',3,'de'],['Database administration','BSc elective',3,'de'],['Data warehousing','Coursework',3,'de ds'],['lxml','XML / iXBRL parsing',4,'de'],
     ['Pandas','Data wrangling',5,'ds de'],['NumPy','Numerical',4,'ds ml'],['SciPy','Statistics',3,'ds'],['Bootstrap CIs','Inference',4,'ds'],['Monte Carlo','Simulation',3,'ds'],['SPSS','Survey statistics',4,'ds office'],
     ['Scikit-learn','Machine learning',4,'ml ds'],['PyTorch','Deep learning',3,'ml'],['LightGBM','Gradient boosting',3,'ml ds'],['Anthropic API','LLMs',4,'ml'],['OpenAI API','LLMs',4,'ml'],['RAG','Retrieval-augmented generation',4,'ml'],['SelfCheckGPT','Hallucination detection',3,'ml'],
-    ['Tableau','Visualisation',3,'ds office'],['Power BI','Dashboards',2,'ds office'],['Excel','Spreadsheets',4,'office ds'],['PowerPoint','Presenting',4,'office'],['Figma','Diagrams',3,'office'],['Jupyter','Notebooks',5,'ds ml'],['Git','Version control',4,'de ml'],['Linux','Environment',3,'de'],['Java / C / C++','Academic',2,'de']];
+    ['Tableau','Visualisation',3,'ds office'],['Power BI','Dashboards',2,'ds office'],['Excel','Spreadsheets',4,'office ds'],['PowerPoint','Presenting',4,'office'],['Figma','Diagrams',3,'office'],['Jupyter','Notebooks',5,'ds ml'],['Git','Version control',4,'de ml'],['GitHub Actions','CI / automation',3,'de ml'],['pytest','Testing',3,'de ml'],['Flask','Web apps',3,'de ml'],['cPanel','Web hosting',3,'de office'],['Cloudflare DNS','Domains and DNS',3,'de office'],['Linux','Environment',3,'de'],['Java / C / C++','Academic',2,'de']];
   var RMAP={ml:'ml rai',ds:'ds da',de:'de dba',office:'ops da'},tg=$('#tools');
   TOOLS.forEach(function(t){var d=document.createElement('div');d.className='tool';d.dataset.c=t[3];d.innerHTML='<b>'+esc(t[0])+'</b><span>'+esc(t[1])+'</span><div class="lvl" aria-label="Level '+t[2]+' of 5">'+[1,2,3,4,5].map(function(i){return '<i class="'+(i<=t[2]?'f':'')+'"></i>'}).join('')+'</div>';
     d.setAttribute('data-r',t[3].split(' ').map(function(c){return RMAP[c]||c}).join(' '));tg.appendChild(d)});
