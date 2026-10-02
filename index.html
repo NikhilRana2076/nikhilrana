@@ -783,7 +783,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
       <span>Nikhil Rana</span></a>
     <nav aria-label="Primary">
       <ul class="nav-links" id="menu">
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">About me</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -866,8 +866,8 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
 <!-- ================= ABOUT ================= -->
 <section class="section solid" id="about">
   <div class="wrap">
-    <div class="s-kicker mono reveal">01 — About</div>
-    <p class="statement reveal">I’m quiet, and I read the footnotes. <span class="dim">Most of my work is checking whether an answer is right before anyone relies on it,</span> and <em class="grad">showing how I checked.</em></p>
+    <div class="s-kicker mono reveal">01 — About me</div>
+    <p class="statement reveal">I’m quiet and I read the footnotes. <span class="dim">Most of my work is checking whether an answer is right before anyone relies on it,</span> and <em class="grad">showing how I checked.</em></p>
     <div class="about-grid">
       <div class="about-text reveal">
         <p>I grew up in Nepal and studied <strong>Computer Science &amp; IT at Tribhuvan University</strong>, where databases, statistics and simulation became my favourite tools. The course took me from Database Management Systems through Data Warehousing &amp; Data Mining to Advanced Database and a Database Administration elective, and my first data role was at <strong>WorldLink Communications</strong>, Nepal’s largest internet provider.</p>
@@ -902,7 +902,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     <div class="reloc glow reveal" id="relocate">
       <div class="reloc-copy">
         <span class="mono" style="color:var(--a1)">Location · Relocation</span>
-        <h3>Based in London. Happy to move.</h3>
+        <h3>Based in London, willing to move.</h3>
         <p>I’m <span class="hl">willing to relocate anywhere in the UK</span>, and I’d especially welcome roles in <span class="hl">Leeds, Newcastle and across the North</span>. Hover over or tap a city.</p>
         <div class="city-chips" id="city-chips"></div>
         <div class="readout" id="readout">Selected: London (home base).</div>
@@ -994,8 +994,8 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
     </div>
     <div class="research-top reveal">
       <div>
-        <h3>Every number in a UK company filing already carries a machine-readable label. I built an LLM system that uses it.</h3>
-        <p>UK accounts are filed in <strong>iXBRL (Inline XBRL)</strong>. The document looks like a normal web page to a person, but every figure is wrapped in a tag that says exactly what it is: its accounting concept, period, currency, scale and any breakdown. My system parses those tags into a database and answers questions <strong>only from the tagged facts</strong>, and if the fact isn’t there, it says so.</p>
+        <h3>TagTrace: an LLM system that answers questions about UK company accounts from their tags</h3>
+        <p>UK accounts are filed in <strong>iXBRL (Inline XBRL)</strong>. The document looks like a normal web page to a person, but every figure is wrapped in a hidden tag, a bit like a barcode, that says exactly what it is: its accounting concept, period, currency, scale and any breakdown. My system parses those tags into a database and answers questions <strong>only from the tagged facts</strong>, and if the fact isn’t there, it says so.</p>
         <p class="meta">Tested on 12 filings (Tesco, Lloyds, AstraZeneca, National Grid and more) · 102-question benchmark · Claude Sonnet 4.6 &amp; GPT-5.6 Terra · Supervised by Dr Ali Gheitasy</p>
       </div>
       <div class="soon live"><span class="pulse"></span><span><span class="hl">The app is live.</span> Upload any UK Companies House iXBRL filing (up to 25&nbsp;MB) and ask questions in plain English. Every answer is traced to the tagged fact behind it. New: built-in sample filings, and a table of every tagged figure. 25 free questions per session (up to 50 a day) on GPT-5.6 Terra; Claude Sonnet 4.6 by access code. The assistant below replays results from my study.<span style="display:block;margin-top:6px;font-size:.78rem;color:var(--ink-3)">Free hosting, so the first load can take up to a minute to wake up.</span></span><a class="btn btn-sm btn-solid" href="https://ixbrl.nikhilrana.com.np/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="research">Open the app <svg><use href="#i-arrow"/></svg></a></div>
@@ -1103,7 +1103,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
           <div class="use" data-r="rai"><span class="mono">Responsible AI</span><h4>Honest evaluation</h4><p>Measure coverage and error rates separately, and don’t rely on self-consistency checks when there is more than one true answer.</p></div>
           <div class="use" data-r="de dba"><span class="mono">Data engineering</span><h4>Use the tags</h4><p>Correct answers went from 46 (no retrieval) to 88 (retrieval as prose) to 94 (tag-aware retrieval).</p></div>
           <div class="use" data-r="fin"><span class="mono">RegTech &amp; audit</span><h4>Traceable answers</h4><p>Every figure links back to the exact tagged fact, period and dimension, which is useful for regulators, auditors and analysts.</p></div>
-          <div class="use" data-r="ml ds"><span class="mono">ML engineering</span><h4>Grounding transfers</h4><p>The same retrieval layer lifted two different frontier models, so the gain isn’t specific to one vendor.</p></div>
+          <div class="use" data-r="ml ds"><span class="mono">ML engineering</span><h4>Grounding transfers</h4><p>The same retrieval layer lifted two different frontier models, and the gain held for both Claude and GPT.</p></div>
         </div>
       </div>
 
@@ -1272,7 +1272,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
       <div class="fplr-foot">
         <span>🏆 Best finish: <b id="k-bestfin">266,096</b> (<span id="k-bestfin-l">top 3%, 2021/22</span>)</span>
         <span>📈 <b>Five straight seasons</b> in the top 7% worldwide (2020/21–2024/25)</span>
-        <span>🧤 <b id="k-bench">59 points</b> left on my bench so far. As a goalkeeper, I know how the bench feels.</span>
+        <span>🧤 <b id="k-bench">59 points</b> left on my bench so far. As a goalkeeper, I’m used to the bench.</span>
       </div>
     </div>
 
@@ -1294,7 +1294,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <svg viewBox="-150 -140 300 280" id="radar-fpl" role="img" aria-label="Radar chart of the captaincy factors"></svg>
         <div class="gauge"><div class="num"><span id="cap-score">0</span></div><div style="flex:1"><div class="mono" style="color:var(--ink-3);margin-bottom:6px">Captaincy score</div><div class="bar"><i id="cap-bar"></i></div></div></div>
         <div class="verdict-fpl" id="cap-verdict"></div>
-        <div class="fpl-foot">A toy model for fun, not financial or FPL advice. Every point costs.</div>
+        <div class="fpl-foot">A toy model for fun, not financial or FPL advice.</div>
       </div>
     </div>
 
@@ -1306,7 +1306,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
       </figure>
       <div class="hobby glow reveal d1">
         <div class="ball" aria-hidden="true">🧤</div>
-        <div><span class="mono">Between the sticks</span><h3>5-a-side goalkeeper</h3><p>I play in goal for a 5-a-side team. Clean sheets aren’t guaranteed.</p></div>
+        <div><span class="mono">Between the sticks</span><h3>5-a-side goalkeeper</h3><p>I play in goal for a 5-a-side team and keep a clean sheet when I can.</p></div>
       </div>
       <div class="hobby glow reveal d2">
         <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -1314,7 +1314,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
       </div>
       <div class="hobby glow reveal d1">
         <span class="glyph">☠︎</span>
-        <div><span class="mono">Favourite anime</span><h3>One Piece</h3><p>Loyalty, friendship and a very long voyage. I’m still watching.</p></div>
+        <div><span class="mono">Favourite anime</span><h3>One Piece</h3><p>It is about loyalty and friendship, and it runs for a very long time. I’m still watching.</p></div>
       </div>
       <div class="hobby glow reveal d2">
         <span class="glyph">✎</span>
@@ -1342,7 +1342,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
 <section class="section contact" id="contact">
   <div class="wrap">
     <div class="s-kicker mono reveal">08 — Contact</div>
-    <h2 class="cta-big reveal">Get in<br><em class="grad">touch.</em></h2>
+    <h2 class="cta-big reveal">Contact<br><em class="grad">me.</em></h2>
     <p class="cta-sub reveal">I enjoy getting to know people, so say hello even if you’re not hiring. I’m based in London, happy to relocate anywhere in the UK, and I reply to every message.</p>
     <div class="contact-grid">
       <div class="reveal">
@@ -1396,7 +1396,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   <div style="position:relative">
     <div class="panel" id="p-ach" role="dialog" aria-label="Explorer badges">
       <h4>Explorer badges</h4>
-      <div class="sub">Find them all to reach the summit 🏔. Progress is saved in this browser.</div>
+      <div class="sub">Find all 11 to reach the summit 🏔. Progress is saved in this browser.</div>
       <div class="achs" id="achs"></div>
     </div>
     <button class="dock-btn" id="b-ach" aria-expanded="false" aria-controls="p-ach"><span class="ring-p" id="ach-ring"></span><span class="lbl">Explorer </span><span id="ach-count">0/11</span></button>
@@ -1404,7 +1404,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   <div style="position:relative">
     <div class="panel" id="p-you" role="dialog" aria-label="Your visit, in data">
       <h4>Your visit, in data</h4>
-      <div class="sub">I can’t help collecting data.</div>
+      <div class="sub">I like collecting data.</div>
       <div class="spark" id="you-spark" aria-hidden="true"></div>
       <dl>
         <dt>Time here</dt><dd id="y-time">0:00</dd>
@@ -1848,7 +1848,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
   function go(id,tab){return function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:still()?'auto':'smooth'});if(tab)setTimeout(function(){$('#'+tab).click()},300)}}
   function copyEmail(){(navigator.clipboard?navigator.clipboard.writeText('nikhilrana2059@gmail.com'):Promise.reject()).then(function(){toast('Email copied ✓')},function(){toast('nikhilrana2059@gmail.com')});track('email-copy',{where:'palette'})}
   var CMDS=[['Open the live iXBRL app','App',function(){track('live-app',{where:'palette'});window.open('https://ixbrl.nikhilrana.com.np/','_blank')}],['Ask the iXBRL assistant','Demo',go('research','t-bot')],['Play “Fact or fabrication?”','Game',go('research','t-game')],['See the anatomy of an iXBRL tag','Learn',go('research','t-tag')],['Open the FPL captaincy lab','Fun',go('fpl')],
-    ['Go to About','Section',go('about')],['Where I can relocate','Section',go('relocate')],['Go to Experience','Section',go('experience')],['Go to Research','Section',go('research')],['Go to Projects & hackathons','Section',go('projects')],
+    ['Go to About me','Section',go('about')],['Where I can relocate','Section',go('relocate')],['Go to Experience','Section',go('experience')],['Go to Research','Section',go('research')],['Go to Projects & hackathons','Section',go('projects')],
     ['Go to Tools & Domains','Section',go('toolkit')],['Explore my BSc modules','Section',go('education')],['Contact me','Section',go('contact')],
     ['Copy my email address','Action',copyEmail],['Download my CV','Action',function(){track('cv-download',{where:'palette'});window.open('assets/Nikhil_Rana_CV.pdf','_blank')}],
     ['Open LinkedIn','Link',function(){track('linkedin',{where:'palette'});window.open('https://www.linkedin.com/in/nikhilrana2076/','_blank')}],['Open GitHub','Link',function(){track('github',{where:'palette'});window.open('https://github.com/NikhilRana2076','_blank')}],
