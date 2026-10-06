@@ -5,7 +5,9 @@ Personal portfolio of **Nikhil Rana**, MSc Artificial Intelligence, University o
 Live site: https://nikhilrana.com.np/
 
 ## Structure
-- `index.html`: the whole site (HTML, CSS and JS in one file, with no external libraries)
+- `tagtrace/index.html`: the TagTrace case study page (static, shares the site's fonts)
+- `images/og-tagtrace.png`: link-preview image used by the Open Graph tags
+- `index.html`: the home page (HTML, CSS and JS in one file, with no external libraries)
 - `images/travel.jpg`: photo used in the "Beyond the desk" section
 - `assets/Nikhil_Rana_CV.pdf`: downloadable CV. Replace this file to update the CV.
 - `assets/fonts/`: self-hosted fonts (Inter Tight, Instrument Serif, JetBrains Mono; SIL Open Font License)
