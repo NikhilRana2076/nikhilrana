@@ -11,7 +11,8 @@
 <meta property="og:title" content="Hi, I'm Nikhil Rana — Responsible AI, ML & Data">
 <meta property="og:description" content="MSc AI graduate in London. My dissertation built an LLM system that answers questions about UK company accounts from their iXBRL tags. Try the demo, the Fact-or-fabrication quiz and my FPL lab.">
 <meta property="og:url" content="https://nikhilrana.com.np/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://nikhilrana.com.np/images/og-tagtrace.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#05070b">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237dd3fc'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%2305070b'/%3E%3Cpath d='M8 46 22 26l7 9 9-15 18 26z' fill='none' stroke='url(%23g)' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/inter-tight-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -997,6 +998,7 @@ body.calm .hero h1 .line>span{animation:none;transform:none}
         <h3>TagTrace: an LLM system that answers questions about UK company accounts from their tags</h3>
         <p>UK accounts are filed in <strong>iXBRL (Inline XBRL)</strong>. The document looks like a normal web page to a person, but every figure is wrapped in a hidden tag, a bit like a barcode, that says exactly what it is: its accounting concept, period, currency, scale and any breakdown. My system parses those tags into a database and answers questions <strong>only from the tagged facts</strong>, and if the fact isn’t there, it says so.</p>
         <p class="meta">Tested on 12 filings (Tesco, Lloyds, AstraZeneca, National Grid and more) · 102-question benchmark · Claude Sonnet 4.6 &amp; GPT-5.6 Terra · Supervised by Dr Ali Gheitasy</p>
+        <p><a class="btn btn-ghost" href="/tagtrace/">Read the full case study</a></p>
       </div>
       <div class="soon live"><span class="pulse"></span><span><span class="hl">The app is live.</span> Upload any UK Companies House iXBRL filing (up to 25&nbsp;MB) and ask questions in plain English. Every answer is traced to the tagged fact behind it. New: built-in sample filings, and a table of every tagged figure. 25 free questions per session (up to 50 a day) on GPT-5.6 Terra; Claude Sonnet 4.6 by access code. The assistant below replays results from my study.<span style="display:block;margin-top:6px;font-size:.78rem;color:var(--ink-3)">Free hosting, so the first load can take up to a minute to wake up.</span></span><a class="btn btn-sm btn-solid" href="https://ixbrl.nikhilrana.com.np/" target="_blank" rel="noopener" data-umami-event="live-app" data-umami-event-where="research">Open the app <svg><use href="#i-arrow"/></svg></a></div>
     </div>
