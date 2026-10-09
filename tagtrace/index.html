@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TagTrace case study | Nikhil Rana</title>
+<meta name="description" content="How tag-aware retrieval lifted LLM accuracy on UK company filings from 45.1% to 92.2%: research questions, method, results and limitations of Nikhil Rana's MSc dissertation.">
+<meta name="author" content="Nikhil Rana">
+<link rel="canonical" href="https://nikhilrana.com.np/tagtrace/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TagTrace: reading UK company accounts by their tags">
+<meta property="og:description" content="LLM accuracy on UK iXBRL filings rose from 45.1% to 92.2% with tag-aware retrieval. Method, results and limitations.">
+<meta property="og:url" content="https://nikhilrana.com.np/tagtrace/">
+<meta property="og:image" content="https://nikhilrana.com.np/images/og-tagtrace.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#05070b">
+<link rel="preload" href="../assets/fonts/inter-tight-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Inter Tight";font-weight:400;font-display:swap;src:url(../assets/fonts/inter-tight-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:500;font-display:swap;src:url(../assets/fonts/inter-tight-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:600 700;font-display:swap;src:url(../assets/fonts/inter-tight-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-weight:400;font-display:swap;src:url(../assets/fonts/jetbrains-mono-latin-400-normal.woff2) format("woff2")}
+:root{
+  --bg:#05070b; --panel:rgba(255,255,255,.03); --line:rgba(255,255,255,.08);
+  --ink:#eef1f5; --ink-2:#a9b2be; --ink-3:#737e8c; --a1:#7dd3fc; --a2:#a78bfa;
+  --grad:linear-gradient(100deg,var(--a1),var(--a2));
+  --display:"Inter Tight",Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 var(--display);-webkit-font-smoothing:antialiased}
+a{color:var(--a1);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:760px;margin:0 auto;padding:28px 20px 80px}
+.back{font:400 13px var(--mono);color:var(--ink-3)}
+.kicker{font:400 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:40px 0 8px}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.08;margin:0 0 18px;letter-spacing:-.02em}
+h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:26px;line-height:1.2;margin:56px 0 12px;letter-spacing:-.01em}
+h3{font-size:18px;margin:28px 0 6px}
+p,li{color:var(--ink-2)}
+strong{color:var(--ink)}
+.lede{font-size:20px;color:var(--ink)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 8px}
+.btn{display:inline-block;padding:10px 18px;border-radius:999px;border:1px solid var(--line);font-weight:600;color:var(--ink)}
+.btn.solid{background:var(--grad);color:#05070b;border-color:transparent}
+.btn:hover{text-decoration:none;border-color:var(--a1)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:28px 0}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.stat b{display:block;font-size:30px;line-height:1.1;color:var(--ink)}
+.stat span{font-size:14px;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font:400 12px var(--mono);color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
+td{color:var(--ink-2)}
+td:first-child{color:var(--ink)}
+.tablewrap{overflow-x:auto}
+ul{padding-left:20px}
+li{margin:6px 0}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-3)}
+</style>
+</head>
+<body>
+<main class="wrap">
+<a class="back" href="/#research">← Back to nikhilrana.com.np</a>
+
+<div class="kicker">Case study · MSc dissertation 2026</div>
+<h1>TagTrace: an LLM that reads UK company accounts <span>by their tags</span></h1>
+<p class="lede">Every number in a UK company filing already carries a machine-readable label. I built a system that answers questions from those labels instead of from the surrounding text, and measured how much that helps.</p>
+<div class="cta">
+  <a class="btn solid" href="https://ixbrl.nikhilrana.com.np/" target="_blank" rel="noopener">Open the live app</a>
+  <a class="btn" href="https://github.com/NikhilRana2076/ixbrl-qa-demo" target="_blank" rel="noopener">View the code</a>
+</div>
+<p class="back">Supervised by Dr Ali Gheitasy · University of West London</p>
+
+<div class="stats">
+  <div class="stat"><b>92.2%</b><span>Accuracy with tag-aware retrieval, up from 45.1% (+47.1 pp, 95% CI [37.3, 56.9])</span></div>
+  <div class="stat"><b>7,106</b><span>Facts parsed from 12 filings: 5,605 numeric and 1,501 narrative</span></div>
+  <div class="stat"><b>0 / 3</b><span>Errors caught by a SelfCheckGPT-style detector</span></div>
+</div>
+
+<h2>The problem</h2>
+<p>UK accounts are filed in iXBRL (Inline XBRL). To a person the document looks like a normal web page. Underneath, every figure is wrapped in a tag that records its accounting concept, period, currency, scale and any breakdown.</p>
+<p>I wanted to know what happens when a general-purpose LLM is asked questions about these filings. Does it make numbers up, and can anything I build around it stop that?</p>
+
+<h2>Three research questions</h2>
+<ul>
+  <li><strong>RQ1.</strong> How often and how severely do general-purpose LLMs fail on UK iXBRL filings without retrieval?</li>
+  <li><strong>RQ2.</strong> Does SelfCheckGPT-style consistency sampling, proven on free-text biographies, also detect hallucination in structured numerical output?</li>
+  <li><strong>RQ3.</strong> Does retrieval grounded in iXBRL's own tags improve accuracy over both a no-retrieval baseline and a detection-only approach?</li>
+</ul>
+
+<h2>Method</h2>
+<p>I wrote a direct iXBRL parser with <code>lxml</code> and checked it against Sainsbury's FY2025 accounts: 621 facts, with revenue reconciled to £32,812m. It feeds a structured fact store of 7,106 facts across 12 filings, 8 from FTSE 350 companies reporting under IFRS and 4 under FRS 102.</p>
+<p>I wrote a 102-question benchmark covering extraction, computation and disclosure, with gold answers and provenance for each. I ran it under three conditions on Claude Sonnet 4.6 and replicated it on GPT-5.6 Terra:</p>
+<ul>
+  <li><strong>C1:</strong> a plain-text baseline with an 8,000-token budget.</li>
+  <li><strong>C2:</strong> C1 plus numeric-aware SelfCheckGPT-style consistency sampling.</li>
+  <li><strong>C3:</strong> tag-aware retrieval from the fact store.</li>
+</ul>
+<p>A demo app then runs the C3 pipeline on filings outside the 12-filing study.</p>
+
+<h2>Results</h2>
+<div class="tablewrap">
+<table>
+  <tr><th>Model and condition</th><th>Correct</th><th>Incorrect</th><th>Abstained</th></tr>
+  <tr><td>Claude, C1 baseline</td><td>45.1%</td><td>2.9%</td><td>52.0%</td></tr>
+  <tr><td>Claude, C3 retrieval</td><td>92.2%</td><td>3.9%</td><td>3.9%</td></tr>
+  <tr><td>GPT-5.6 Terra, C1 baseline</td><td>43.1%</td><td>2.9%</td><td>53.9%</td></tr>
+  <tr><td>GPT-5.6 Terra, C3 retrieval</td><td>84.3%</td><td>3.9%</td><td>11.8%</td></tr>
+</table>
+</div>
+<p>Each row covers 102 questions. The Claude gain from C1 to C3 is +47.1 pp (95% CI [37.3, 56.9], bootstrap n = 1000).</p>
+
+<h3>RQ1: the models abstained instead of fabricating</h3>
+<p>Without retrieval, 52.0% of Claude's answers were an honest "not found" and only 2.9% were confidently wrong. How often it answered correctly tracked how long the filing was compared with the 8,000-token budget: 29% correct on FTSE 350 filings against 86% on the shorter FRS 102 filings.</p>
+
+<h3>RQ2: the detector caught nothing</h3>
+<p>The consistency check caught 0 of 3 errors on either model. There are two reasons. Many iXBRL concepts legitimately have more than one valid value, so disagreement between samples does not mean a hallucination. And the baseline's errors were systematic misreadings, not random ones, which is exactly what consistency sampling cannot see.</p>
+
+<h3>RQ3: retrieval works, mainly by improving coverage</h3>
+<p>Retrieval lifted Claude from 45.1% to 92.2%. An ablation separates retrieval from presentation: unstructured retrieval alone reaches 86.3%, and presenting the facts in structured form adds about 6 points more. Questions about company-specific extension concepts rose from 15% to 92%, and dimensional questions from 17% to 88%.</p>
+<p>Under C3, Claude beat GPT by 7.8 pp (95% CI [2.9, 12.7]). That gap comes from abstention (3.9% against 11.8%), not from the error rate on answered questions (4.1% against 4.4%, not significantly different). Coverage gains carried over to the second model. Abstention behaviour did not.</p>
+
+<h2>The live app</h2>
+<p>The same C3 pipeline runs as a free web app. You upload a UK iXBRL filing and ask questions in plain English. The server checks every cited fact and does any arithmetic itself, so the model cannot invent a figure, and it says so when the filing has no tagged answer.</p>
+<p>A regression suite runs in GitHub Actions: a free retrieval check on every pull request (93% recall@15), end-to-end accuracy runs (66% correct, 5% wrong) under a $0.50 spend cap, and 54 automated tests.</p>
+
+<h2>Limitations</h2>
+<ul>
+  <li>I reduced the scope from a planned 50 filings and about 500 questions to 12 and 102, with my supervisor's approval, because project time was short. Reporting framework and company size are perfectly confounded in the corpus.</li>
+  <li>The 8,000-token baseline budget was set by cost, not by principle.</li>
+  <li>I did not test a finance-specialised model, and GPT-5.6 Terra could not be run at a controlled temperature.</li>
+  <li>The planned independent dual review of the gold answers was not completed because the reviewer was unavailable.</li>
+  <li>I made three scorer corrections and one gold-answer correction during the study. All are logged.</li>
+</ul>
+
+<h2>What I would do next</h2>
+<ul>
+  <li>Scale the corpus back towards 50 filings to separate company size from reporting framework.</li>
+  <li>Test a finance-specialised model such as FinMA or FinGPT.</li>
+  <li>Build a detector that checks against all of a concept's legitimate values instead of raw consistency.</li>
+  <li>Extend narrative retrieval past the first matching block and add explicit disambiguation for dimensions.</li>
+  <li>Use the ablation to show what metadata AI-ready reporting standards need.</li>
+</ul>
+
+<footer>© 2026 Nikhil Rana · <a href="/">Home</a> · <a href="https://ixbrl.nikhilrana.com.np/" target="_blank" rel="noopener">Live app</a></footer>
+</main>
+</body>
+</html>
